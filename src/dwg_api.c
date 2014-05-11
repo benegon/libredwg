@@ -269,7 +269,7 @@ dwg_ent_circle_init(dwg_ent_circle *circle)
 \param 3 int
 */
 void
-dwg_ent_circle_get_center(dwg_ent_circle *circle, dwg_point_3d *point, 
+dwg_ent_circle_get_center(const dwg_ent_circle *circle, dwg_point_3d *point, 
                           int *error)
 {
   if(point != 0 && circle != 0)
@@ -310,7 +310,7 @@ dwg_ent_circle_set_center(dwg_ent_circle *circle, dwg_point_3d *point,
 \param 2 int
 */
 double
-dwg_ent_circle_get_radius(dwg_ent_circle *circle, int *error)
+dwg_ent_circle_get_radius(const dwg_ent_circle *circle, int *error)
 {
   if(circle != 0)
     {
@@ -345,7 +345,7 @@ dwg_ent_circle_set_radius(dwg_ent_circle *circle, double radius, int *error)
 \param 2 int
 */
 double
-dwg_ent_circle_get_thickness(dwg_ent_circle *circle, int *error)
+dwg_ent_circle_get_thickness(const dwg_ent_circle *circle, int *error)
 {
   if(circle != 0)
     {
@@ -402,7 +402,7 @@ dwg_ent_circle_set_extrusion(dwg_ent_circle *circle, dwg_point_3d *vector,
 \param 3 int
 */
 void
-dwg_ent_circle_get_extrusion(dwg_ent_circle *circle, dwg_point_3d *vector,
+dwg_ent_circle_get_extrusion(const dwg_ent_circle *circle, dwg_point_3d *vector,
                              int *error)
 {
   if(circle != 0)
@@ -476,7 +476,7 @@ dwg_ent_line_init(dwg_ent_line *line)
 \param 3 int
 */
 void
-dwg_ent_line_get_start_point(dwg_ent_line *line, dwg_point_3d *point,
+dwg_ent_line_get_start_point(const dwg_ent_line *line, dwg_point_3d *point,
                              int *error)
 {
   if (line != 0)
@@ -518,7 +518,7 @@ dwg_ent_line_set_start_point(dwg_ent_line *line, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_line_get_end_point(dwg_ent_line *line, dwg_point_3d *point, 
+dwg_ent_line_get_end_point(const dwg_ent_line *line, dwg_point_3d *point, 
                            int *error)
 {
   if (line != 0)
@@ -559,7 +559,7 @@ dwg_ent_line_set_end_point(dwg_ent_line *line, dwg_point_3d *point,
 \param 2 int
 */
 double
-dwg_ent_line_get_thickness(dwg_ent_line *line, int *error)
+dwg_ent_line_get_thickness(const dwg_ent_line *line, int *error)
 {
   if (line != 0)
     {
@@ -595,7 +595,7 @@ dwg_ent_line_set_thickness(dwg_ent_line *line, double thickness, int *error)
 \param 3 int
 */
 void
-dwg_ent_line_get_extrusion(dwg_ent_line *line, dwg_point_3d *vector,
+dwg_ent_line_get_extrusion(const dwg_ent_line *line, dwg_point_3d *vector,
                            int *error)
 {
   if (line != 0)
@@ -690,7 +690,7 @@ dwg_ent_arc_init(dwg_ent_arc *arc)
 \param 3 int
 */
 void
-dwg_ent_arc_get_center(dwg_ent_arc *arc, dwg_point_3d *point,
+dwg_ent_arc_get_center(const dwg_ent_arc *arc, dwg_point_3d *point,
                        int *error)
 {
   if (arc != 0)
@@ -731,7 +731,7 @@ dwg_ent_arc_set_center(dwg_ent_arc *arc, dwg_point_3d *point,
 \param 2 int
 */
 double
-dwg_ent_arc_get_radius(dwg_ent_arc *arc, int *error)
+dwg_ent_arc_get_radius(const dwg_ent_arc *arc, int *error)
 {
   if (arc != 0)
     {
@@ -766,7 +766,7 @@ dwg_ent_arc_set_radius(dwg_ent_arc *arc, double radius, int *error)
 \param 2 int
 */
 double
-dwg_ent_arc_get_thickness(dwg_ent_arc *arc, int *error)
+dwg_ent_arc_get_thickness(const dwg_ent_arc *arc, int *error)
 {
   if (arc != 0)
     {
@@ -802,7 +802,7 @@ dwg_ent_arc_set_thickness(dwg_ent_arc *arc, double thickness, int *error)
 \param 3 int
 */
 void
-dwg_ent_arc_get_extrusion(dwg_ent_arc *arc, dwg_point_3d *vector, int *error)
+dwg_ent_arc_get_extrusion(const dwg_ent_arc *arc, dwg_point_3d *vector, int *error)
 {
   if (arc != 0)
     {
@@ -841,7 +841,7 @@ dwg_ent_arc_set_extrusion(dwg_ent_arc *arc, dwg_point_3d *vector, int *error)
 \param 2 int
 */
 double
-dwg_ent_arc_get_start_angle(dwg_ent_arc *arc, int *error)
+dwg_ent_arc_get_start_angle(const dwg_ent_arc *arc, int *error)
 {
   if (arc != 0)
     {
@@ -876,7 +876,7 @@ dwg_ent_arc_set_start_angle(dwg_ent_arc *arc, double start_angle, int *error)
 \param 2 int
 */
 double
-dwg_ent_arc_get_end_angle(dwg_ent_arc *arc, int *error)
+dwg_ent_arc_get_end_angle(const dwg_ent_arc *arc, int *error)
 {
   if (arc != 0)
     {
@@ -969,7 +969,7 @@ dwg_ent_ellipse_init(dwg_ent_ellipse *ellipse)
 \param 3 int
 */
 void
-dwg_ent_ellipse_get_center(dwg_ent_ellipse *ellipse, dwg_point_3d *point,
+dwg_ent_ellipse_get_center(const dwg_ent_ellipse *ellipse, dwg_point_3d *point,
                            int *error)
 {
   if (ellipse != 0)
@@ -1011,7 +1011,7 @@ dwg_ent_ellipse_set_center(dwg_ent_ellipse *ellipse, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_ellipse_get_sm_axis(dwg_ent_ellipse *ellipse, dwg_point_3d *point,
+dwg_ent_ellipse_get_sm_axis(const dwg_ent_ellipse *ellipse, dwg_point_3d *point,
                             int *error)
 {
   if (ellipse != 0)
@@ -1053,7 +1053,7 @@ dwg_ent_ellipse_set_sm_axis(dwg_ent_ellipse *ellipse, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_ellipse_get_extrusion(dwg_ent_ellipse *ellipse, dwg_point_3d *vector,
+dwg_ent_ellipse_get_extrusion(const dwg_ent_ellipse *ellipse, dwg_point_3d *vector,
                               int *error)
 {
   if (ellipse != 0)
@@ -1094,7 +1094,7 @@ dwg_ent_ellipse_set_extrusion(dwg_ent_ellipse *ellipse, dwg_point_3d *vector,
 \param 2 int
 */
 double
-dwg_ent_ellipse_get_axis_ratio(dwg_ent_ellipse *ellipse, int *error)
+dwg_ent_ellipse_get_axis_ratio(const dwg_ent_ellipse *ellipse, int *error)
 {
   if (ellipse != 0)
     {
@@ -1130,7 +1130,7 @@ dwg_ent_ellipse_set_axis_ratio(dwg_ent_ellipse *ellipse, double ratio,
 \param 2 int
 */
 double
-dwg_ent_ellipse_get_start_angle(dwg_ent_ellipse *ellipse, int *error)
+dwg_ent_ellipse_get_start_angle(const dwg_ent_ellipse *ellipse, int *error)
 {
   if (ellipse != 0)
     {
@@ -1166,7 +1166,7 @@ dwg_ent_ellipse_set_start_angle(dwg_ent_ellipse *ellipse, double start_angle,
 \param 2 int
 */
 double
-dwg_ent_ellipse_get_end_angle(dwg_ent_ellipse *ellipse, int *error)
+dwg_ent_ellipse_get_end_angle(const dwg_ent_ellipse *ellipse, int *error)
 {
   if (ellipse != 0)
     {
@@ -1224,7 +1224,7 @@ dwg_ent_text_set_text(dwg_ent_text *text, char * text_value, int *error)
 \param 2 int
 */
 char *
-dwg_ent_text_get_text(dwg_ent_text *text, int *error)
+dwg_ent_text_get_text(const dwg_ent_text *text, int *error)
 {
   if (text != 0)
     {
@@ -1242,7 +1242,7 @@ dwg_ent_text_get_text(dwg_ent_text *text, int *error)
 \param 3 int
 */
 void
-dwg_ent_text_get_insertion_point(dwg_ent_text *text, dwg_point_2d *point,
+dwg_ent_text_get_insertion_point(const dwg_ent_text *text, dwg_point_2d *point,
                                  int *error)
 {
   if (text != 0)
@@ -1281,7 +1281,7 @@ dwg_ent_text_set_insertion_point(dwg_ent_text *text, dwg_point_2d *point,
 \param 2 int
 */
 double
-dwg_ent_text_get_height(dwg_ent_text *text, int *error)
+dwg_ent_text_get_height(const dwg_ent_text *text, int *error)
 {
   if (text != 0)
     {
@@ -1317,7 +1317,7 @@ dwg_ent_text_set_height(dwg_ent_text *text, double height, int *error)
 \param 3 int
 */
 void
-dwg_ent_text_get_extrusion(dwg_ent_text *text, dwg_point_3d *vector,
+dwg_ent_text_get_extrusion(const dwg_ent_text *text, dwg_point_3d *vector,
                            int *error)
 {
   if (text != 0)
@@ -1358,7 +1358,7 @@ dwg_ent_text_set_extrusion(dwg_ent_text *text, dwg_point_3d *vector,
 \param 2 int
 */
 double
-dwg_ent_text_get_thickness(dwg_ent_text *text, int *error)
+dwg_ent_text_get_thickness(const dwg_ent_text *text, int *error)
 {
   if (text != 0)
     {
@@ -1393,7 +1393,7 @@ dwg_ent_text_set_thickness(dwg_ent_text *text, double thickness, int *error)
 \param 2 int
 */
 double
-dwg_ent_text_get_rot_angle(dwg_ent_text *text, int *error)
+dwg_ent_text_get_rot_angle(const dwg_ent_text *text, int *error)
 {
   if (text != 0)
     {
@@ -1428,7 +1428,7 @@ dwg_ent_text_set_rot_angle(dwg_ent_text *text, double angle, int *error)
 \param 2 int
 */
 double
-dwg_ent_text_get_vert_align(dwg_ent_text *text, int *error)
+dwg_ent_text_get_vert_align(const dwg_ent_text *text, int *error)
 {
   if (text != 0)
     {
@@ -1463,7 +1463,7 @@ dwg_ent_text_set_vert_align(dwg_ent_text *text, double alignment, int *error)
 \param 2 int
 */
 double
-dwg_ent_text_get_horiz_align(dwg_ent_text *text, int *error)
+dwg_ent_text_get_horiz_align(const dwg_ent_text *text, int *error)
 {
   if (text != 0)
     {
@@ -1520,7 +1520,7 @@ dwg_ent_attrib_set_text(dwg_ent_attrib *attrib, char * text_value, int *error)
 \param 2 int
 */
 char *
-dwg_ent_attrib_get_text(dwg_ent_attrib *attrib, int *error)
+dwg_ent_attrib_get_text(const dwg_ent_attrib *attrib, int *error)
 {
   if (attrib != 0)
     {
@@ -1538,7 +1538,7 @@ dwg_ent_attrib_get_text(dwg_ent_attrib *attrib, int *error)
 \param 3 int
 */
 void
-dwg_ent_attrib_get_insertion_point(dwg_ent_attrib *attrib,
+dwg_ent_attrib_get_insertion_point(const dwg_ent_attrib *attrib,
                                    dwg_point_2d *point, int *error)
 {
   if (attrib != 0)
@@ -1577,7 +1577,7 @@ dwg_ent_attrib_set_insertion_point(dwg_ent_attrib *attrib,
 \param 2 int
 */
 double
-dwg_ent_attrib_get_height(dwg_ent_attrib *attrib, int *error)
+dwg_ent_attrib_get_height(const dwg_ent_attrib *attrib, int *error)
 {
   if (attrib != 0)
     {
@@ -1613,7 +1613,7 @@ dwg_ent_attrib_set_height(dwg_ent_attrib *attrib, double height, int *error)
 \param 3 int
 */
 void
-dwg_ent_attrib_get_extrusion(dwg_ent_attrib *attrib, dwg_point_3d *vector,
+dwg_ent_attrib_get_extrusion(const dwg_ent_attrib *attrib, dwg_point_3d *vector,
                              int *error)
 {
   if (attrib != 0)
@@ -1654,7 +1654,7 @@ dwg_ent_attrib_set_extrusion(dwg_ent_attrib *attrib, dwg_point_3d *vector,
 \param 2 int
 */
 double
-dwg_ent_attrib_get_thickness(dwg_ent_attrib *attrib, int *error)
+dwg_ent_attrib_get_thickness(const dwg_ent_attrib *attrib, int *error)
 {
   if (attrib != 0)
     {
@@ -1690,7 +1690,7 @@ dwg_ent_attrib_set_thickness(dwg_ent_attrib *attrib, double thickness,
 \param 2 int
 */
 double
-dwg_ent_attrib_get_rot_angle(dwg_ent_attrib *attrib, int *error)
+dwg_ent_attrib_get_rot_angle(const dwg_ent_attrib *attrib, int *error)
 {
   if (attrib != 0)
     {
@@ -1725,7 +1725,7 @@ dwg_ent_attrib_set_rot_angle(dwg_ent_attrib *attrib, double angle, int *error)
 \param 2 int
 */
 double
-dwg_ent_attrib_get_vert_align(dwg_ent_attrib *attrib, int *error)
+dwg_ent_attrib_get_vert_align(const dwg_ent_attrib *attrib, int *error)
 {
   if (attrib != 0)
     {
@@ -1761,7 +1761,7 @@ dwg_ent_attrib_set_vert_align(dwg_ent_attrib *attrib, double alignment,
 \param 2 int
 */
 double
-dwg_ent_attrib_get_horiz_align(dwg_ent_attrib *attrib, int *error)
+dwg_ent_attrib_get_horiz_align(const dwg_ent_attrib *attrib, int *error)
 {
   if (attrib != 0)
     {
@@ -1820,7 +1820,7 @@ dwg_ent_attdef_set_text(dwg_ent_attdef *attdef, char * default_value,
 \param 2 int
 */
 char *
-dwg_ent_attdef_get_text(dwg_ent_attdef *attdef, int *error)
+dwg_ent_attdef_get_text(const dwg_ent_attdef *attdef, int *error)
 {
   if (attdef != 0)
     {
@@ -1838,7 +1838,7 @@ dwg_ent_attdef_get_text(dwg_ent_attdef *attdef, int *error)
 \param 3 int
 */
 void
-dwg_ent_attdef_get_insertion_point(dwg_ent_attdef *attdef,
+dwg_ent_attdef_get_insertion_point(const dwg_ent_attdef *attdef,
                                    dwg_point_2d *point, int *error)
 {
   if (attdef != 0)
@@ -1877,7 +1877,7 @@ dwg_ent_attdef_set_insertion_point(dwg_ent_attdef *attdef,
 \param 2 int
 */
 double
-dwg_ent_attdef_get_height(dwg_ent_attdef *attdef, int *error)
+dwg_ent_attdef_get_height(const dwg_ent_attdef *attdef, int *error)
 {
   if (attdef != 0)
     {
@@ -1913,7 +1913,7 @@ dwg_ent_attdef_set_height(dwg_ent_attdef *attdef, double height, int *error)
 \param 3 int
 */
 void
-dwg_ent_attdef_get_extrusion(dwg_ent_attdef *attdef, dwg_point_3d *vector,
+dwg_ent_attdef_get_extrusion(const dwg_ent_attdef *attdef, dwg_point_3d *vector,
                              int *error)
 {
   if (attdef != 0)
@@ -1954,7 +1954,7 @@ dwg_ent_attdef_set_extrusion(dwg_ent_attdef *attdef, dwg_point_3d *vector,
 \param 2 int
 */
 double
-dwg_ent_attdef_get_thickness(dwg_ent_attdef *attdef, int *error)
+dwg_ent_attdef_get_thickness(const dwg_ent_attdef *attdef, int *error)
 {
   if (attdef != 0)
     {
@@ -1990,7 +1990,7 @@ dwg_ent_attdef_set_thickness(dwg_ent_attdef *attdef, double thickness,
 \param 2 int
 */
 double
-dwg_ent_attdef_get_rot_angle(dwg_ent_attdef *attdef, int *error)
+dwg_ent_attdef_get_rot_angle(const dwg_ent_attdef *attdef, int *error)
 {
   if (attdef != 0)
     {
@@ -2025,7 +2025,7 @@ dwg_ent_attdef_set_rot_angle(dwg_ent_attdef *attdef, double angle, int *error)
 \param 2 int
 */
 double
-dwg_ent_attdef_get_vert_align(dwg_ent_attdef *attdef, int *error)
+dwg_ent_attdef_get_vert_align(const dwg_ent_attdef *attdef, int *error)
 {
   if (attdef != 0)
     {
@@ -2061,7 +2061,7 @@ dwg_ent_attdef_set_vert_align(dwg_ent_attdef *attdef, double alignment,
 \param 2 int
 */
 double
-dwg_ent_attdef_get_horiz_align(dwg_ent_attdef *attdef, int *error)
+dwg_ent_attdef_get_horiz_align(const dwg_ent_attdef *attdef, int *error)
 {
   if (attdef != 0)
     {
@@ -2123,7 +2123,7 @@ dwg_ent_point_set_point(dwg_ent_point *point, dwg_point_3d *retpoint,
 \param 3 int
 */
 void
-dwg_ent_point_get_point(dwg_ent_point *point, dwg_point_3d *retpoint,
+dwg_ent_point_get_point(const dwg_ent_point *point, dwg_point_3d *retpoint,
                         int *error)
 {    
   if (point != 0)
@@ -2143,7 +2143,7 @@ dwg_ent_point_get_point(dwg_ent_point *point, dwg_point_3d *retpoint,
 \param 2 int
 */
 double
-dwg_ent_point_get_thickness(dwg_ent_point *point, int *error)
+dwg_ent_point_get_thickness(const dwg_ent_point *point, int *error)
 {    
   if (point != 0)
     {
@@ -2201,7 +2201,7 @@ dwg_ent_point_set_extrusion(dwg_ent_point *point, dwg_point_3d *retpoint,
 \param 3 int
 */
 void
-dwg_ent_point_get_extrusion(dwg_ent_point *point, dwg_point_3d *retpoint, 
+dwg_ent_point_get_extrusion(const dwg_ent_point *point, dwg_point_3d *retpoint, 
                             int *error)
 {    
   if (point != 0)
@@ -2225,7 +2225,7 @@ dwg_ent_point_get_extrusion(dwg_ent_point *point, dwg_point_3d *retpoint,
 \param 2 int
 */
 double
-dwg_ent_solid_get_thickness(dwg_ent_solid *solid, int *error)
+dwg_ent_solid_get_thickness(const dwg_ent_solid *solid, int *error)
 {    
   if (solid != 0)
     {
@@ -2261,7 +2261,7 @@ dwg_ent_solid_set_thickness(dwg_ent_solid *solid, double thickness,
 \param 2 int
 */
 double
-dwg_ent_solid_get_elevation(dwg_ent_solid *solid, int *error)
+dwg_ent_solid_get_elevation(const dwg_ent_solid *solid, int *error)
 {    
   if (solid != 0)
     {
@@ -2298,7 +2298,7 @@ dwg_ent_solid_set_elevation(dwg_ent_solid *solid, double elevation,
 \param 3 int
 */
 void
-dwg_ent_solid_get_corner1(dwg_ent_solid *solid, dwg_point_2d *point,
+dwg_ent_solid_get_corner1(const dwg_ent_solid *solid, dwg_point_2d *point,
                           int *error)
 {    
   if (solid != 0)
@@ -2338,7 +2338,7 @@ dwg_ent_solid_set_corner1(dwg_ent_solid *solid, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_solid_get_corner2(dwg_ent_solid *solid, dwg_point_2d *point,
+dwg_ent_solid_get_corner2(const dwg_ent_solid *solid, dwg_point_2d *point,
                           int *error)
 {    
   if (solid != 0)
@@ -2378,7 +2378,7 @@ dwg_ent_solid_set_corner2(dwg_ent_solid *solid, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_solid_get_corner3(dwg_ent_solid *solid, dwg_point_2d *point,
+dwg_ent_solid_get_corner3(const dwg_ent_solid *solid, dwg_point_2d *point,
                           int *error)
 {    
   if (solid != 0)
@@ -2418,7 +2418,7 @@ dwg_ent_solid_set_corner3(dwg_ent_solid *solid, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_solid_get_corner4(dwg_ent_solid *solid, dwg_point_2d *point,
+dwg_ent_solid_get_corner4(const dwg_ent_solid *solid, dwg_point_2d *point,
                           int *error)
 {    
   if (solid != 0)
@@ -2458,7 +2458,7 @@ dwg_ent_solid_set_corner4(dwg_ent_solid *solid, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_solid_get_extrusion(dwg_ent_solid *solid, dwg_point_3d *vector,
+dwg_ent_solid_get_extrusion(const dwg_ent_solid *solid, dwg_point_3d *vector,
                             int *error)
 {    
   if (solid != 0)
@@ -2521,7 +2521,7 @@ dwg_ent_block_set_name(dwg_ent_block *block, char * name, int *error)
 \param 2 int
 */
 char *
-dwg_ent_block_get_name(dwg_ent_block *block, int *error)
+dwg_ent_block_get_name(const dwg_ent_block *block, int *error)
 {    
   if (block != 0)
     {
@@ -2543,7 +2543,7 @@ dwg_ent_block_get_name(dwg_ent_block *block, int *error)
 \param 3 int
 */
 void
-dwg_ent_ray_get_point(dwg_ent_ray *ray, dwg_point_3d *point, int *error)
+dwg_ent_ray_get_point(const dwg_ent_ray *ray, dwg_point_3d *point, int *error)
 {    
   if (ray != 0)
     {
@@ -2583,7 +2583,7 @@ dwg_ent_ray_set_point(dwg_ent_ray *ray, dwg_point_3d *point, int *error)
 \param 3 int
 */
 void
-dwg_ent_ray_get_vector(dwg_ent_ray *ray, dwg_point_3d *vector, int *error)
+dwg_ent_ray_get_vector(const dwg_ent_ray *ray, dwg_point_3d *vector, int *error)
 {    
   if (ray != 0)
     {
@@ -2627,7 +2627,7 @@ dwg_ent_ray_set_vector(dwg_ent_ray *ray, dwg_point_3d *vector, int *error)
 \param 3 int
 */
 void
-dwg_ent_xline_get_point(dwg_ent_xline *xline, dwg_point_3d *point, int *error)
+dwg_ent_xline_get_point(const dwg_ent_xline *xline, dwg_point_3d *point, int *error)
 {    
   if (xline != 0)
     {
@@ -2667,7 +2667,7 @@ dwg_ent_xline_set_point(dwg_ent_xline *xline, dwg_point_3d *point, int *error)
 \param 3 int
 */
 void
-dwg_ent_xline_get_vector(dwg_ent_xline *xline, dwg_point_3d *vector,
+dwg_ent_xline_get_vector(const dwg_ent_xline *xline, dwg_point_3d *vector,
                          int *error)
 {    
   if (xline != 0)
@@ -2712,7 +2712,7 @@ dwg_ent_xline_set_vector(dwg_ent_xline *xline, dwg_point_3d *vector,
 \param 2 int
 */
 double
-dwg_ent_trace_get_thickness(dwg_ent_trace *trace, int *error)
+dwg_ent_trace_get_thickness(const dwg_ent_trace *trace, int *error)
 {    
   if (trace != 0)
     {
@@ -2748,7 +2748,7 @@ dwg_ent_trace_set_thickness(dwg_ent_trace *trace, double thickness,
 \param 2 int
 */
 double
-dwg_ent_trace_get_elevation(dwg_ent_trace *trace, int *error)
+dwg_ent_trace_get_elevation(const dwg_ent_trace *trace, int *error)
 {    
   if (trace != 0)
     {
@@ -2785,7 +2785,7 @@ dwg_ent_trace_set_elevation(dwg_ent_trace *trace, double elevation,
 \param 3 int
 */
 void
-dwg_ent_trace_get_corner1(dwg_ent_trace *trace, dwg_point_2d *point,
+dwg_ent_trace_get_corner1(const dwg_ent_trace *trace, dwg_point_2d *point,
                           int *error)
 {    
   if (trace != 0)
@@ -2825,7 +2825,7 @@ dwg_ent_trace_set_corner1(dwg_ent_trace *trace, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_trace_get_corner2(dwg_ent_trace *trace, dwg_point_2d *point,
+dwg_ent_trace_get_corner2(const dwg_ent_trace *trace, dwg_point_2d *point,
                           int *error)
 {    
   if (trace != 0)
@@ -2865,7 +2865,7 @@ dwg_ent_trace_set_corner2(dwg_ent_trace *trace, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_trace_get_corner3(dwg_ent_trace *trace, dwg_point_2d *point,
+dwg_ent_trace_get_corner3(const dwg_ent_trace *trace, dwg_point_2d *point,
                           int *error)
 {    
   if (trace != 0)
@@ -2905,7 +2905,7 @@ dwg_ent_trace_set_corner3(dwg_ent_trace *trace, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_trace_get_corner4(dwg_ent_trace *trace, dwg_point_2d *point,
+dwg_ent_trace_get_corner4(const dwg_ent_trace *trace, dwg_point_2d *point,
                           int *error)
 {    
   if (trace != 0)
@@ -2945,7 +2945,7 @@ dwg_ent_trace_set_corner4(dwg_ent_trace *trace, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_trace_get_extrusion(dwg_ent_trace *trace, dwg_point_3d *vector,
+dwg_ent_trace_get_extrusion(const dwg_ent_trace *trace, dwg_point_3d *vector,
                             int *error)
 {    
   if (trace != 0)
@@ -2990,7 +2990,7 @@ dwg_ent_trace_set_extrusion(dwg_ent_trace *trace, dwg_point_3d *vector,
 \param 2 int
 */
 char
-dwg_ent_vertex_3d_get_flags(dwg_ent_vertex_3d *vert, int *error)
+dwg_ent_vertex_3d_get_flags(const dwg_ent_vertex_3d *vert, int *error)
 {    
   if (vert != 0)
     {
@@ -3026,7 +3026,7 @@ dwg_ent_vertex_3d_set_flags(dwg_ent_vertex_3d *vert, char flags, int *error)
 \param 3 int
 */
 void
-dwg_ent_vertex_3d_get_point(dwg_ent_vertex_3d *vert, dwg_point_3d *point,
+dwg_ent_vertex_3d_get_point(const dwg_ent_vertex_3d *vert, dwg_point_3d *point,
                             int *error)
 {    
   if (vert != 0)
@@ -3071,7 +3071,7 @@ dwg_ent_vertex_3d_set_point(dwg_ent_vertex_3d *vert,
 \param 2 int
 */
 char
-dwg_ent_vertex_mesh_get_flags(dwg_ent_vertex_mesh *vert, int *error)
+dwg_ent_vertex_mesh_get_flags(const dwg_ent_vertex_mesh *vert, int *error)
 {    
   if (vert != 0)
     {
@@ -3108,7 +3108,7 @@ dwg_ent_vertex_mesh_set_flags(dwg_ent_vertex_mesh *vert, char flags,
 \param 3 int
 */
 void
-dwg_ent_vertex_mesh_get_point(dwg_ent_vertex_mesh *vert, dwg_point_3d *point,
+dwg_ent_vertex_mesh_get_point(const dwg_ent_vertex_mesh *vert, dwg_point_3d *point,
                               int *error)
 {    
   if (vert != 0)
@@ -3153,7 +3153,7 @@ dwg_ent_vertex_mesh_set_point(dwg_ent_vertex_mesh *vert, dwg_point_3d *point,
 \param 2 int
 */
 char
-dwg_ent_vertex_pface_get_flags(dwg_ent_vertex_pface *vert, int *error)
+dwg_ent_vertex_pface_get_flags(const dwg_ent_vertex_pface *vert, int *error)
 {    
   if (vert != 0)
     {
@@ -3190,7 +3190,7 @@ dwg_ent_vertex_pface_set_flags(dwg_ent_vertex_pface *vert, char flags,
 \param 3 int
 */
 void
-dwg_ent_vertex_pface_get_point(dwg_ent_vertex_pface *vert,
+dwg_ent_vertex_pface_get_point(const dwg_ent_vertex_pface *vert,
                                dwg_point_3d *point, int *error)
 {    
   if (vert != 0)
@@ -3235,7 +3235,7 @@ dwg_ent_vertex_pface_set_point(dwg_ent_vertex_pface *vert,
 \param 2 int
 */
 char
-dwg_ent_vertex_2d_get_flags(dwg_ent_vertex_2d *vert, int *error)
+dwg_ent_vertex_2d_get_flags(const dwg_ent_vertex_2d *vert, int *error)
 {    
   if (vert != 0)
     {
@@ -3271,7 +3271,7 @@ dwg_ent_vertex_2d_set_flags(dwg_ent_vertex_2d *vert, char flags, int *error)
 \param 3 int
 */
 void
-dwg_ent_vertex_2d_get_point(dwg_ent_vertex_2d *vert, dwg_point_3d *point,
+dwg_ent_vertex_2d_get_point(const dwg_ent_vertex_2d *vert, dwg_point_3d *point,
                             int *error)
 {    
   if (vert != 0)
@@ -3312,7 +3312,7 @@ dwg_ent_vertex_2d_set_point(dwg_ent_vertex_2d *vert, dwg_point_3d *point,
 \param 2 int
 */
 double
-dwg_ent_vertex_2d_get_start_width(dwg_ent_vertex_2d *vert, int *error)
+dwg_ent_vertex_2d_get_start_width(const dwg_ent_vertex_2d *vert, int *error)
 {    
   if (vert != 0)
     {
@@ -3348,7 +3348,7 @@ dwg_ent_vertex_2d_set_start_width(dwg_ent_vertex_2d *vert, double start_width,
 \param 2 int
 */
 double
-dwg_ent_vertex_2d_get_end_width(dwg_ent_vertex_2d *vert, int *error)
+dwg_ent_vertex_2d_get_end_width(const dwg_ent_vertex_2d *vert, int *error)
 {    
   if (vert != 0)
     {
@@ -3384,7 +3384,7 @@ dwg_ent_vertex_2d_set_end_width(dwg_ent_vertex_2d *vert, double end_width,
 \param 2 int
 */
 double
-dwg_ent_vertex_2d_get_bulge(dwg_ent_vertex_2d *vert, int *error)
+dwg_ent_vertex_2d_get_bulge(const dwg_ent_vertex_2d *vert, int *error)
 {    
   if (vert != 0)
     {
@@ -3419,7 +3419,7 @@ dwg_ent_vertex_2d_set_bulge(dwg_ent_vertex_2d *vert, double bulge, int *error)
 \param 2 int
 */
 double
-dwg_ent_vertex_2d_get_tangent_dir(dwg_ent_vertex_2d *vert, int *error)
+dwg_ent_vertex_2d_get_tangent_dir(const dwg_ent_vertex_2d *vert, int *error)
 {    
   if (vert != 0)
     {
@@ -3460,7 +3460,7 @@ dwg_ent_vertex_2d_set_tangent_dir(dwg_ent_vertex_2d *vert, double tangent_dir,
 \param 3 int
 */
 void
-dwg_ent_insert_get_ins_pt(dwg_ent_insert *insert, dwg_point_3d *point,
+dwg_ent_insert_get_ins_pt(const dwg_ent_insert *insert, dwg_point_3d *point,
                           int *error)
 {    
   if (insert != 0)
@@ -3501,7 +3501,7 @@ dwg_ent_insert_set_ins_pt(dwg_ent_insert *insert, dwg_point_3d *point,
 \param 2 int
 */
 char
-dwg_ent_insert_get_scale_flag(dwg_ent_insert *insert, int *error)
+dwg_ent_insert_get_scale_flag(const dwg_ent_insert *insert, int *error)
 {    
   if (insert != 0)
     {
@@ -3537,7 +3537,7 @@ dwg_ent_insert_set_scale_flag(dwg_ent_insert *insert, char flags, int *error)
 \param 3 int
 */
 void
-dwg_ent_insert_get_scale(dwg_ent_insert *insert, dwg_point_3d *point,
+dwg_ent_insert_get_scale(const dwg_ent_insert *insert, dwg_point_3d *point,
                          int *error)
 {    
   if (insert != 0)
@@ -3578,7 +3578,7 @@ dwg_ent_insert_set_scale(dwg_ent_insert *insert, dwg_point_3d *point,
 \param 2 int
 */
 double
-dwg_ent_insert_get_rotation_angle(dwg_ent_insert *insert, int *error)
+dwg_ent_insert_get_rotation_angle(const dwg_ent_insert *insert, int *error)
 {    
   if (insert != 0)
     {
@@ -3615,7 +3615,7 @@ dwg_ent_insert_set_rotation_angle(dwg_ent_insert *insert, double rot_ang,
 \param 3 int
 */
 void
-dwg_ent_insert_get_extrusion(dwg_ent_insert *insert, dwg_point_3d *point,
+dwg_ent_insert_get_extrusion(const dwg_ent_insert *insert, dwg_point_3d *point,
                              int *error)
 {    
   if (insert != 0)
@@ -3656,7 +3656,7 @@ dwg_ent_insert_set_extrusion(dwg_ent_insert *insert, dwg_point_3d *point,
 \param 2 int
 */
 char
-dwg_ent_insert_get_has_attribs(dwg_ent_insert *insert, int *error)
+dwg_ent_insert_get_has_attribs(const dwg_ent_insert *insert, int *error)
 {    
   if (insert != 0)
     {
@@ -3692,7 +3692,7 @@ dwg_ent_insert_set_has_attribs(dwg_ent_insert *insert, char attribs,
 \param 2 int
 */
 long
-dwg_ent_insert_get_owned_obj_count(dwg_ent_insert *insert, int *error)
+dwg_ent_insert_get_owned_obj_count(const dwg_ent_insert *insert, int *error)
 {    
   if (insert != 0)
     {
@@ -3728,7 +3728,7 @@ dwg_ent_insert_set_owned_obj_count(dwg_ent_insert *insert, long count,
 \param 2 int
 */
 dwg_handle
-dwg_ent_insert_get_ref_handle(dwg_ent_insert *insert, int *error)
+dwg_ent_insert_get_ref_handle(const dwg_ent_insert *insert, int *error)
 {
   if(insert != 0)
     {
@@ -3745,7 +3745,7 @@ dwg_ent_insert_get_ref_handle(dwg_ent_insert *insert, int *error)
 \param 2 int
 */
 unsigned long
-dwg_ent_insert_get_abs_ref(dwg_ent_insert *insert, int *error)
+dwg_ent_insert_get_abs_ref(const dwg_ent_insert *insert, int *error)
 {
   if(insert != 0)
     {
@@ -3767,7 +3767,7 @@ dwg_ent_insert_get_abs_ref(dwg_ent_insert *insert, int *error)
 \param 3 int
 */
 void
-dwg_ent_minsert_get_ins_pt(dwg_ent_minsert *minsert, dwg_point_3d *point,
+dwg_ent_minsert_get_ins_pt(const dwg_ent_minsert *minsert, dwg_point_3d *point,
                            int *error)
 {    
   if (minsert != 0)
@@ -3808,7 +3808,7 @@ dwg_ent_minsert_set_ins_pt(dwg_ent_minsert *minsert, dwg_point_3d *point,
 \param 2 int
 */
 char 
-dwg_ent_minsert_get_scale_flag(dwg_ent_minsert *minsert, int *error)
+dwg_ent_minsert_get_scale_flag(const dwg_ent_minsert *minsert, int *error)
 {    
   if (minsert != 0)
     {
@@ -3845,7 +3845,7 @@ dwg_ent_minsert_set_scale_flag(dwg_ent_minsert *minsert, char flags,
 \param 3 int
 */
 void
-dwg_ent_minsert_get_scale(dwg_ent_minsert *minsert, dwg_point_3d *point,
+dwg_ent_minsert_get_scale(const dwg_ent_minsert *minsert, dwg_point_3d *point,
                           int *error)
 {    
   if (minsert != 0)
@@ -3886,7 +3886,7 @@ dwg_ent_minsert_set_scale(dwg_ent_minsert *minsert, dwg_point_3d *point,
 \param 2 int
 */
 double
-dwg_ent_minsert_get_rotation_angle(dwg_ent_minsert *minsert, int *error)
+dwg_ent_minsert_get_rotation_angle(const dwg_ent_minsert *minsert, int *error)
 {    
   if (minsert != 0)
     {
@@ -3923,7 +3923,7 @@ dwg_ent_minsert_set_rotation_angle(dwg_ent_minsert *minsert, double rot_ang,
 \param 3 int
 */
 void
-dwg_ent_minsert_get_extrusion(dwg_ent_minsert *minsert, dwg_point_3d *point,
+dwg_ent_minsert_get_extrusion(const dwg_ent_minsert *minsert, dwg_point_3d *point,
                               int *error)
 {    
   if (minsert != 0)
@@ -3964,7 +3964,7 @@ dwg_ent_minsert_set_extrusion(dwg_ent_minsert *minsert, dwg_point_3d *point,
 \param 2 int
 */
 char 
-dwg_ent_minsert_get_has_attribs(dwg_ent_minsert *minsert, int *error)
+dwg_ent_minsert_get_has_attribs(const dwg_ent_minsert *minsert, int *error)
 {    
   if (minsert != 0)
     {
@@ -4000,7 +4000,7 @@ dwg_ent_minsert_set_has_attribs(dwg_ent_minsert *minsert, char attribs,
 \param 2 int
 */
 long
-dwg_ent_minsert_get_owned_obj_count(dwg_ent_minsert *minsert, int *error)
+dwg_ent_minsert_get_owned_obj_count(const dwg_ent_minsert *minsert, int *error)
 {    
   if (minsert != 0)
     {
@@ -4036,7 +4036,7 @@ dwg_ent_minsert_set_owned_obj_count(dwg_ent_minsert *minsert, long count,
 \param 2 int
 */
 long
-dwg_ent_minsert_get_numcols(dwg_ent_minsert *minsert, int *error)
+dwg_ent_minsert_get_numcols(const dwg_ent_minsert *minsert, int *error)
 {    
   if (minsert != 0)
     {
@@ -4071,7 +4071,7 @@ dwg_ent_minsert_set_numcols(dwg_ent_minsert *minsert, long cols, int *error)
 \param 2 int
 */
 long
-dwg_ent_minsert_get_numrows(dwg_ent_minsert *minsert, int *error)
+dwg_ent_minsert_get_numrows(const dwg_ent_minsert *minsert, int *error)
 {    
   if (minsert != 0)
     {
@@ -4106,7 +4106,7 @@ dwg_ent_minsert_set_numrows(dwg_ent_minsert *minsert, long cols, int *error)
 \param 2 int
 */
 double
-dwg_ent_minsert_get_col_spacing(dwg_ent_minsert *minsert, int *error)
+dwg_ent_minsert_get_col_spacing(const dwg_ent_minsert *minsert, int *error)
 {    
   if (minsert != 0)
     {
@@ -4142,7 +4142,7 @@ dwg_ent_minsert_set_col_spacing(dwg_ent_minsert *minsert, double spacing,
 \param 2 int
 */
 double
-dwg_ent_minsert_get_row_spacing(dwg_ent_minsert *minsert, int *error)
+dwg_ent_minsert_get_row_spacing(const dwg_ent_minsert *minsert, int *error)
 {    
   if (minsert != 0)
     {
@@ -4542,7 +4542,7 @@ dwg_obj_appid_get_appid_control(dwg_obj_appid *appid, int *error)
 \param 2 int
 */
 double
-dwg_ent_dim_ordinate_get_elevation_ecs11(dwg_ent_dim_ordinate *dim, int *error)
+dwg_ent_dim_ordinate_get_elevation_ecs11(const dwg_ent_dim_ordinate *dim, int *error)
 {
   if (dim != 0)
     {
@@ -4578,7 +4578,7 @@ dwg_ent_dim_ordinate_set_elevation_ecs11(dwg_ent_dim_ordinate *dim,
 \param 2 int
 */
 double
-dwg_ent_dim_ordinate_get_elevation_ecs12(dwg_ent_dim_ordinate *dim, int *error)
+dwg_ent_dim_ordinate_get_elevation_ecs12(const dwg_ent_dim_ordinate *dim, int *error)
 {
   if (dim != 0)
     {
@@ -4614,7 +4614,7 @@ dwg_ent_dim_ordinate_set_elevation_ecs12(dwg_ent_dim_ordinate *dim,
 \param 2 int
 */
 char
-dwg_ent_dim_ordinate_get_flags1(dwg_ent_dim_ordinate *dim, int *error)
+dwg_ent_dim_ordinate_get_flags1(const dwg_ent_dim_ordinate *dim, int *error)
 {
   if (dim != 0)
     {
@@ -4650,7 +4650,7 @@ dwg_ent_dim_ordinate_set_flags1(dwg_ent_dim_ordinate *dim, char flag,
 \param 2 int
 */
 double
-dwg_ent_dim_ordinate_get_act_measurement(dwg_ent_dim_ordinate *dim, int *error)
+dwg_ent_dim_ordinate_get_act_measurement(const dwg_ent_dim_ordinate *dim, int *error)
 {
   if (dim != 0)
     {
@@ -4686,7 +4686,7 @@ dwg_ent_dim_ordinate_set_act_measurement(dwg_ent_dim_ordinate *dim,
 \param 2 int
 */
 double
-dwg_ent_dim_ordinate_get_horiz_dir(dwg_ent_dim_ordinate *dim, int *error)
+dwg_ent_dim_ordinate_get_horiz_dir(const dwg_ent_dim_ordinate *dim, int *error)
 {
   if (dim != 0)
     {
@@ -4722,7 +4722,7 @@ dwg_ent_dim_ordinate_set_horiz_dir(dwg_ent_dim_ordinate *dim, double horiz_dir,
 \param 2 int
 */
 double
-dwg_ent_dim_ordinate_get_lspace_factor(dwg_ent_dim_ordinate *dim, int *error)
+dwg_ent_dim_ordinate_get_lspace_factor(const dwg_ent_dim_ordinate *dim, int *error)
 {
   if (dim != 0)
     {
@@ -4758,7 +4758,7 @@ dwg_ent_dim_ordinate_set_lspace_factor(dwg_ent_dim_ordinate *dim,
 \param 2 int
 */
 unsigned int
-dwg_ent_dim_ordinate_get_lspace_style(dwg_ent_dim_ordinate *dim,
+dwg_ent_dim_ordinate_get_lspace_style(const dwg_ent_dim_ordinate *dim,
                                       int *error)
 {
   if (dim != 0)
@@ -4795,7 +4795,7 @@ dwg_ent_dim_ordinate_set_lspace_style(dwg_ent_dim_ordinate *dim,
 \param 2 int
 */
 unsigned int
-dwg_ent_dim_ordinate_get_attachment_point(dwg_ent_dim_ordinate *dim,
+dwg_ent_dim_ordinate_get_attachment_point(const dwg_ent_dim_ordinate *dim,
                                           int *error)
 {
   if (dim != 0)
@@ -4854,7 +4854,7 @@ dwg_ent_dim_ordinate_set_extrusion(dwg_ent_dim_ordinate *dim,
 \param 3 int
 */
 void
-dwg_ent_dim_ordinate_get_extrusion(dwg_ent_dim_ordinate *dim,
+dwg_ent_dim_ordinate_get_extrusion(const dwg_ent_dim_ordinate *dim,
                                    dwg_point_3d *point, int *error)
 {
   if (dim != 0)
@@ -4874,7 +4874,7 @@ dwg_ent_dim_ordinate_get_extrusion(dwg_ent_dim_ordinate *dim,
 \param 2 int
 */
 char *
-dwg_ent_dim_ordinate_get_user_text(dwg_ent_dim_ordinate *dim, int *error)
+dwg_ent_dim_ordinate_get_user_text(const dwg_ent_dim_ordinate *dim, int *error)
 {
   if (dim != 0)
     {
@@ -4910,7 +4910,7 @@ dwg_ent_dim_ordinate_set_user_text(dwg_ent_dim_ordinate *dim, char * text,
 \param 2 int
 */
 double
-dwg_ent_dim_ordinate_get_text_rot(dwg_ent_dim_ordinate *dim, int *error)
+dwg_ent_dim_ordinate_get_text_rot(const dwg_ent_dim_ordinate *dim, int *error)
 {
   if (dim != 0)
     {
@@ -4946,7 +4946,7 @@ dwg_ent_dim_ordinate_set_text_rot(dwg_ent_dim_ordinate *dim, double rot,
 \param 2 int
 */
 double
-dwg_ent_dim_ordinate_get_ins_rotation(dwg_ent_dim_ordinate *dim, int *error)
+dwg_ent_dim_ordinate_get_ins_rotation(const dwg_ent_dim_ordinate *dim, int *error)
 {
   if (dim != 0)
     {
@@ -4982,7 +4982,7 @@ dwg_ent_dim_ordinate_set_ins_rotation(dwg_ent_dim_ordinate *dim, double rot,
 \param 2 int
 */
 char
-dwg_ent_dim_ordinate_get_flip_arrow1(dwg_ent_dim_ordinate *dim, int *error)
+dwg_ent_dim_ordinate_get_flip_arrow1(const dwg_ent_dim_ordinate *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5018,7 +5018,7 @@ dwg_ent_dim_ordinate_set_flip_arrow1(dwg_ent_dim_ordinate *dim,
 \param 2 int
 */
 char
-dwg_ent_dim_ordinate_get_flip_arrow2(dwg_ent_dim_ordinate *dim, int *error)
+dwg_ent_dim_ordinate_get_flip_arrow2(const dwg_ent_dim_ordinate *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5075,7 +5075,7 @@ dwg_ent_dim_ordinate_set_text_mid_pt(dwg_ent_dim_ordinate *dim,
 \param 3 int
 */
 void
-dwg_ent_dim_ordinate_get_text_mid_pt(dwg_ent_dim_ordinate *dim,
+dwg_ent_dim_ordinate_get_text_mid_pt(const dwg_ent_dim_ordinate *dim,
                                           dwg_point_2d *point, int *error)
 {
   if (dim != 0)
@@ -5116,7 +5116,7 @@ dwg_ent_dim_ordinate_set_ins_scale(dwg_ent_dim_ordinate *dim,
 \param 3 int
 */
 void
-dwg_ent_dim_ordinate_get_ins_scale(dwg_ent_dim_ordinate *dim,
+dwg_ent_dim_ordinate_get_ins_scale(const dwg_ent_dim_ordinate *dim,
                                    dwg_point_3d *point, int *error)
 {
   if (dim != 0)
@@ -5136,7 +5136,7 @@ dwg_ent_dim_ordinate_get_ins_scale(dwg_ent_dim_ordinate *dim,
 \param 2 int
 */
 char
-dwg_ent_dim_ordinate_get_flags2(dwg_ent_dim_ordinate *dim, int *error)
+dwg_ent_dim_ordinate_get_flags2(const dwg_ent_dim_ordinate *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5193,7 +5193,7 @@ dwg_ent_dim_ordinate_set_12_pt(dwg_ent_dim_ordinate *dim, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_ordinate_get_12_pt(dwg_ent_dim_ordinate *dim, dwg_point_2d *point,
+dwg_ent_dim_ordinate_get_12_pt(const dwg_ent_dim_ordinate *dim, dwg_point_2d *point,
                                int *error)
 {
   if (dim != 0)
@@ -5234,7 +5234,7 @@ dwg_ent_dim_ordinate_set_10_pt(dwg_ent_dim_ordinate *dim, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_ordinate_get_10_pt(dwg_ent_dim_ordinate *dim, dwg_point_3d *point,
+dwg_ent_dim_ordinate_get_10_pt(const dwg_ent_dim_ordinate *dim, dwg_point_3d *point,
                                int *error)
 {
   if (dim != 0)
@@ -5276,7 +5276,7 @@ dwg_ent_dim_ordinate_set_13_pt(dwg_ent_dim_ordinate *dim, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_ordinate_get_13_pt(dwg_ent_dim_ordinate *dim, dwg_point_3d *point,
+dwg_ent_dim_ordinate_get_13_pt(const dwg_ent_dim_ordinate *dim, dwg_point_3d *point,
                                int *error)
 {
   if (dim != 0)
@@ -5318,7 +5318,7 @@ dwg_ent_dim_ordinate_set_14_pt(dwg_ent_dim_ordinate *dim, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_ordinate_get_14_pt(dwg_ent_dim_ordinate *dim, dwg_point_3d *point,
+dwg_ent_dim_ordinate_get_14_pt(const dwg_ent_dim_ordinate *dim, dwg_point_3d *point,
                                int *error)
 {
   if (dim != 0)
@@ -5337,7 +5337,7 @@ dwg_ent_dim_ordinate_get_14_pt(dwg_ent_dim_ordinate *dim, dwg_point_3d *point,
 ********************************************************************/
 
 char *
-dwg_ent_dim_linear_get_block_name(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_block_name(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5354,7 +5354,7 @@ dwg_ent_dim_linear_get_block_name(dwg_ent_dim_linear *dim, int *error)
 \param 2 int
 */
 double
-dwg_ent_dim_linear_get_elevation_ecs11(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_elevation_ecs11(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5390,7 +5390,7 @@ dwg_ent_dim_linear_set_elevation_ecs11(dwg_ent_dim_linear *dim,
 \param 2 int
 */
 double
-dwg_ent_dim_linear_get_elevation_ecs12(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_elevation_ecs12(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5426,7 +5426,7 @@ dwg_ent_dim_linear_set_elevation_ecs12(dwg_ent_dim_linear *dim,
 \param 2 int
 */
 char
-dwg_ent_dim_linear_get_flags1(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_flags1(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5461,7 +5461,7 @@ dwg_ent_dim_linear_set_flags1(dwg_ent_dim_linear *dim, char flag, int *error)
 \param 2 int
 */
 double
-dwg_ent_dim_linear_get_act_measurement(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_act_measurement(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5497,7 +5497,7 @@ dwg_ent_dim_linear_set_act_measurement(dwg_ent_dim_linear *dim,
 \param 2 int
 */
 double
-dwg_ent_dim_linear_get_horiz_dir(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_horiz_dir(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5533,7 +5533,7 @@ dwg_ent_dim_linear_set_horiz_dir(dwg_ent_dim_linear *dim,
 \param 2 int
 */
 double
-dwg_ent_dim_linear_get_lspace_factor(dwg_ent_dim_linear *dim,
+dwg_ent_dim_linear_get_lspace_factor(const dwg_ent_dim_linear *dim,
                                      int *error)
 {
   if (dim != 0)
@@ -5570,7 +5570,7 @@ dwg_ent_dim_linear_set_lspace_factor(dwg_ent_dim_linear *dim, double factor,
 \param 2 int
 */
 unsigned int
-dwg_ent_dim_linear_get_lspace_style(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_lspace_style(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5606,7 +5606,7 @@ dwg_ent_dim_linear_set_lspace_style(dwg_ent_dim_linear *dim,
 \param 2 int
 */
 unsigned int
-dwg_ent_dim_linear_get_attachment_point(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_attachment_point(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5664,7 +5664,7 @@ dwg_ent_dim_linear_set_extrusion(dwg_ent_dim_linear *dim, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_linear_get_extrusion(dwg_ent_dim_linear *dim, dwg_point_3d *point,
+dwg_ent_dim_linear_get_extrusion(const dwg_ent_dim_linear *dim, dwg_point_3d *point,
                                  int *error)
 {
   if (dim != 0)
@@ -5684,7 +5684,7 @@ dwg_ent_dim_linear_get_extrusion(dwg_ent_dim_linear *dim, dwg_point_3d *point,
 \param 2 int
 */
 char *
-dwg_ent_dim_linear_get_user_text(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_user_text(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5720,7 +5720,7 @@ dwg_ent_dim_linear_set_user_text(dwg_ent_dim_linear *dim, char * text,
 \param 2 int
 */
 double
-dwg_ent_dim_linear_get_text_rot(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_text_rot(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5756,7 +5756,7 @@ dwg_ent_dim_linear_set_text_rot(dwg_ent_dim_linear *dim, double rot,
 \param 2 int
 */
 double
-dwg_ent_dim_linear_get_ins_rotation(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_ins_rotation(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5792,7 +5792,7 @@ dwg_ent_dim_linear_set_ins_rotation(dwg_ent_dim_linear *dim, double rot,
 \param 2 int
 */
 char
-dwg_ent_dim_linear_get_flip_arrow1(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_flip_arrow1(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5828,7 +5828,7 @@ dwg_ent_dim_linear_set_flip_arrow1(dwg_ent_dim_linear *dim, char flip_arrow,
 \param 2 int
 */
 char
-dwg_ent_dim_linear_get_flip_arrow2(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_flip_arrow2(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -5886,7 +5886,7 @@ dwg_ent_dim_linear_set_text_mid_pt(dwg_ent_dim_linear *dim,
 \param 3 int
 */
 void
-dwg_ent_dim_linear_get_text_mid_pt(dwg_ent_dim_linear *dim,
+dwg_ent_dim_linear_get_text_mid_pt(const dwg_ent_dim_linear *dim,
                                    dwg_point_2d *point, 
                                    int *error)
 {
@@ -5928,7 +5928,7 @@ dwg_ent_dim_linear_set_ins_scale(dwg_ent_dim_linear *dim, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_linear_get_ins_scale(dwg_ent_dim_linear *dim, dwg_point_3d *point, 
+dwg_ent_dim_linear_get_ins_scale(const dwg_ent_dim_linear *dim, dwg_point_3d *point, 
                                  int *error)
 {
   if (dim != 0)
@@ -5969,7 +5969,7 @@ dwg_ent_dim_linear_set_12_pt(dwg_ent_dim_linear *dim, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_linear_get_12_pt(dwg_ent_dim_linear *dim, dwg_point_2d *point, 
+dwg_ent_dim_linear_get_12_pt(const dwg_ent_dim_linear *dim, dwg_point_2d *point, 
                              int *error)
 {
   if (dim != 0)
@@ -6010,7 +6010,7 @@ dwg_ent_dim_linear_set_10_pt(dwg_ent_dim_linear *dim, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_linear_get_10_pt(dwg_ent_dim_linear *dim, dwg_point_3d *point, 
+dwg_ent_dim_linear_get_10_pt(const dwg_ent_dim_linear *dim, dwg_point_3d *point, 
                              int *error)
 {
   if (dim != 0)
@@ -6052,7 +6052,7 @@ dwg_ent_dim_linear_set_13_pt(dwg_ent_dim_linear *dim, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_linear_get_13_pt(dwg_ent_dim_linear *dim, dwg_point_3d *point,
+dwg_ent_dim_linear_get_13_pt(const dwg_ent_dim_linear *dim, dwg_point_3d *point,
                              int *error)
 {
   if (dim != 0)
@@ -6094,7 +6094,7 @@ dwg_ent_dim_linear_set_14_pt(dwg_ent_dim_linear *dim, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_linear_get_14_pt(dwg_ent_dim_linear *dim, dwg_point_3d *point,
+dwg_ent_dim_linear_get_14_pt(const dwg_ent_dim_linear *dim, dwg_point_3d *point,
                              int *error)
 {
   if (dim != 0)
@@ -6114,7 +6114,7 @@ dwg_ent_dim_linear_get_14_pt(dwg_ent_dim_linear *dim, dwg_point_3d *point,
 \param 2 int
 */
 double
-dwg_ent_dim_linear_get_ext_line_rotation(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_ext_line_rotation(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6150,7 +6150,7 @@ dwg_ent_dim_linear_set_ext_line_rotation(dwg_ent_dim_linear *dim, double rot,
 \param 2 int
 */
 double
-dwg_ent_dim_linear_get_dim_rot(dwg_ent_dim_linear *dim, int *error)
+dwg_ent_dim_linear_get_dim_rot(const dwg_ent_dim_linear *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6189,7 +6189,7 @@ dwg_ent_dim_linear_set_dim_rot(dwg_ent_dim_linear *dim, double rot, int *error)
 \param 2 int
 */
 double
-dwg_ent_dim_aligned_get_elevation_ecs11(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_elevation_ecs11(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6226,7 +6226,7 @@ dwg_ent_dim_aligned_set_elevation_ecs11(dwg_ent_dim_aligned *dim,
 \param 2 int
 */
 double
-dwg_ent_dim_aligned_get_elevation_ecs12(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_elevation_ecs12(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6263,7 +6263,7 @@ dwg_ent_dim_aligned_set_elevation_ecs12(dwg_ent_dim_aligned *dim,
 \param 2 int
 */
 char
-dwg_ent_dim_aligned_get_flags1(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_flags1(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6298,7 +6298,7 @@ dwg_ent_dim_aligned_set_flags1(dwg_ent_dim_aligned *dim, char flag, int *error)
 \param 2 int
 */
 double
-dwg_ent_dim_aligned_get_act_measurement(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_act_measurement(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6334,7 +6334,7 @@ dwg_ent_dim_aligned_set_act_measurement(dwg_ent_dim_aligned *dim,
 \param 2 int
 */
 double
-dwg_ent_dim_aligned_get_horiz_dir(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_horiz_dir(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6370,7 +6370,7 @@ dwg_ent_dim_aligned_set_horiz_dir(dwg_ent_dim_aligned *dim, double horiz_dir,
 \param 2 int
 */
 double
-dwg_ent_dim_aligned_get_lspace_factor(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_lspace_factor(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6406,7 +6406,7 @@ dwg_ent_dim_aligned_set_lspace_factor(dwg_ent_dim_aligned *dim, double factor,
 \param 2 int
 */
 unsigned int
-dwg_ent_dim_aligned_get_lspace_style(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_lspace_style(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6442,7 +6442,7 @@ dwg_ent_dim_aligned_set_lspace_style(dwg_ent_dim_aligned *dim,
 \param 2 int
 */
 unsigned int
-dwg_ent_dim_aligned_get_attachment_point(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_attachment_point(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6500,7 +6500,7 @@ dwg_ent_dim_aligned_set_extrusion(dwg_ent_dim_aligned *dim,
 \param 3 int
 */
 void
-dwg_ent_dim_aligned_get_extrusion(dwg_ent_dim_aligned *dim,
+dwg_ent_dim_aligned_get_extrusion(const dwg_ent_dim_aligned *dim,
                                   dwg_point_3d *point, int *error)
 {
   if (dim != 0)
@@ -6520,7 +6520,7 @@ dwg_ent_dim_aligned_get_extrusion(dwg_ent_dim_aligned *dim,
 \param 2 int
 */
 char *
-dwg_ent_dim_aligned_get_user_text(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_user_text(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6556,7 +6556,7 @@ dwg_ent_dim_aligned_set_user_text(dwg_ent_dim_aligned *dim, char * text,
 \param 2 int
 */
 double
-dwg_ent_dim_aligned_get_text_rot(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_text_rot(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6592,7 +6592,7 @@ dwg_ent_dim_aligned_set_text_rot(dwg_ent_dim_aligned *dim, double rot,
 \param 2 int
 */
 double
-dwg_ent_dim_aligned_get_ins_rotation(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_ins_rotation(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6628,7 +6628,7 @@ dwg_ent_dim_aligned_set_ins_rotation(dwg_ent_dim_aligned *dim, double rot,
 \param 2 int
 */
 char
-dwg_ent_dim_aligned_get_flip_arrow1(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_flip_arrow1(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6664,7 +6664,7 @@ dwg_ent_dim_aligned_set_flip_arrow1(dwg_ent_dim_aligned *dim, char flip_arrow,
 \param 2 int
 */
 char
-dwg_ent_dim_aligned_get_flip_arrow2(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_flip_arrow2(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6721,7 +6721,7 @@ dwg_ent_dim_aligned_set_text_mid_pt(dwg_ent_dim_aligned *dim,
 \param 3 int
 */
 void
-dwg_ent_dim_aligned_get_text_mid_pt(dwg_ent_dim_aligned *dim,
+dwg_ent_dim_aligned_get_text_mid_pt(const dwg_ent_dim_aligned *dim,
                                     dwg_point_2d *point, int *error)
 {
   if (dim != 0)
@@ -6762,7 +6762,7 @@ dwg_ent_dim_aligned_set_ins_scale(dwg_ent_dim_aligned *dim,
 \param 3 int
 */
 void
-dwg_ent_dim_aligned_get_ins_scale(dwg_ent_dim_aligned *dim,
+dwg_ent_dim_aligned_get_ins_scale(const dwg_ent_dim_aligned *dim,
                                   dwg_point_3d *point, int *error)
 {
   if (dim != 0)
@@ -6803,7 +6803,7 @@ dwg_ent_dim_aligned_set_12_pt(dwg_ent_dim_aligned *dim, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_aligned_get_12_pt(dwg_ent_dim_aligned *dim, dwg_point_2d *point,
+dwg_ent_dim_aligned_get_12_pt(const dwg_ent_dim_aligned *dim, dwg_point_2d *point,
                               int *error)
 {
   if (dim != 0)
@@ -6844,7 +6844,7 @@ dwg_ent_dim_aligned_set_10_pt(dwg_ent_dim_aligned *dim, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_aligned_get_10_pt(dwg_ent_dim_aligned *dim, dwg_point_3d *point,
+dwg_ent_dim_aligned_get_10_pt(const dwg_ent_dim_aligned *dim, dwg_point_3d *point,
                               int *error)
 {
   if (dim != 0)
@@ -6886,7 +6886,7 @@ dwg_ent_dim_aligned_set_13_pt(dwg_ent_dim_aligned *dim, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_aligned_get_13_pt(dwg_ent_dim_aligned *dim, dwg_point_3d *point,
+dwg_ent_dim_aligned_get_13_pt(const dwg_ent_dim_aligned *dim, dwg_point_3d *point,
                               int *error)
 {
   if (dim != 0)
@@ -6928,7 +6928,7 @@ dwg_ent_dim_aligned_set_14_pt(dwg_ent_dim_aligned *dim, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_aligned_get_14_pt(dwg_ent_dim_aligned *dim, dwg_point_3d *point,
+dwg_ent_dim_aligned_get_14_pt(const dwg_ent_dim_aligned *dim, dwg_point_3d *point,
                               int *error)
 {
   if (dim != 0)
@@ -6948,7 +6948,7 @@ dwg_ent_dim_aligned_get_14_pt(dwg_ent_dim_aligned *dim, dwg_point_3d *point,
 \param 2 int
 */
 double
-dwg_ent_dim_aligned_get_ext_line_rotation(dwg_ent_dim_aligned *dim, int *error)
+dwg_ent_dim_aligned_get_ext_line_rotation(const dwg_ent_dim_aligned *dim, int *error)
 {
   if (dim != 0)
     {
@@ -6988,7 +6988,7 @@ dwg_ent_dim_aligned_set_ext_line_rotation(dwg_ent_dim_aligned *dim,
 \param 2 int
 */
 double
-dwg_ent_dim_ang3pt_get_elevation_ecs11(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_elevation_ecs11(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7024,7 +7024,7 @@ dwg_ent_dim_ang3pt_set_elevation_ecs11(dwg_ent_dim_ang3pt *ang,
 \param 2 int
 */
 double
-dwg_ent_dim_ang3pt_get_elevation_ecs12(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_elevation_ecs12(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7060,7 +7060,7 @@ dwg_ent_dim_ang3pt_set_elevation_ecs12(dwg_ent_dim_ang3pt *ang,
 \param 2 int
 */
 char
-dwg_ent_dim_ang3pt_get_flags1(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_flags1(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7095,7 +7095,7 @@ dwg_ent_dim_ang3pt_set_flags1(dwg_ent_dim_ang3pt *ang, char flag, int *error)
 \param 2 int
 */
 double
-dwg_ent_dim_ang3pt_get_act_measurement(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_act_measurement(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7131,7 +7131,7 @@ dwg_ent_dim_ang3pt_set_act_measurement(dwg_ent_dim_ang3pt *ang,
 \param 2 int
 */
 double
-dwg_ent_dim_ang3pt_get_horiz_dir(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_horiz_dir(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7167,7 +7167,7 @@ dwg_ent_dim_ang3pt_set_horiz_dir(dwg_ent_dim_ang3pt *ang, double horiz_dir,
 \param 2 int
 */
 double
-dwg_ent_dim_ang3pt_get_lspace_factor(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_lspace_factor(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7203,7 +7203,7 @@ dwg_ent_dim_ang3pt_set_lspace_factor(dwg_ent_dim_ang3pt *ang, double factor,
 \param 2 int
 */
 unsigned int
-dwg_ent_dim_ang3pt_get_lspace_style(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_lspace_style(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7239,7 +7239,7 @@ dwg_ent_dim_ang3pt_set_lspace_style(dwg_ent_dim_ang3pt *ang,
 \param 2 int
 */
 unsigned int
-dwg_ent_dim_ang3pt_get_attachment_point(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_attachment_point(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7297,7 +7297,7 @@ dwg_ent_dim_ang3pt_set_extrusion(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_ang3pt_get_extrusion(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
+dwg_ent_dim_ang3pt_get_extrusion(const dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
                                  int *error)
 {
   if (ang != 0)
@@ -7317,7 +7317,7 @@ dwg_ent_dim_ang3pt_get_extrusion(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
 \param 2 int
 */
 char *
-dwg_ent_dim_ang3pt_get_user_text(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_user_text(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7353,7 +7353,7 @@ dwg_ent_dim_ang3pt_set_user_text(dwg_ent_dim_ang3pt *ang, char * text,
 \param 2 int
 */
 double
-dwg_ent_dim_ang3pt_get_text_rot(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_text_rot(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7389,7 +7389,7 @@ dwg_ent_dim_ang3pt_set_text_rot(dwg_ent_dim_ang3pt *ang, double rot,
 \param 2 int
 */
 double
-dwg_ent_dim_ang3pt_get_ins_rotation(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_ins_rotation(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7425,7 +7425,7 @@ dwg_ent_dim_ang3pt_set_ins_rotation(dwg_ent_dim_ang3pt *ang, double rot,
 \param 2 int
 */
 char
-dwg_ent_dim_ang3pt_get_flip_arrow1(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_flip_arrow1(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7461,7 +7461,7 @@ dwg_ent_dim_ang3pt_set_flip_arrow1(dwg_ent_dim_ang3pt *ang, char flip_arrow,
 \param 2 int
 */
 char
-dwg_ent_dim_ang3pt_get_flip_arrow2(dwg_ent_dim_ang3pt *ang, int *error)
+dwg_ent_dim_ang3pt_get_flip_arrow2(const dwg_ent_dim_ang3pt *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7518,7 +7518,7 @@ dwg_ent_dim_ang3pt_set_text_mid_pt(dwg_ent_dim_ang3pt *ang,
 \param 3 int
 */
 void
-dwg_ent_dim_ang3pt_get_text_mid_pt(dwg_ent_dim_ang3pt *ang,
+dwg_ent_dim_ang3pt_get_text_mid_pt(const dwg_ent_dim_ang3pt *ang,
                                    dwg_point_2d *point, int *error)
 {
   if (ang != 0)
@@ -7559,7 +7559,7 @@ dwg_ent_dim_ang3pt_set_ins_scale(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_ang3pt_get_ins_scale(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
+dwg_ent_dim_ang3pt_get_ins_scale(const dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
                                  int *error)
 {
   if (ang != 0)
@@ -7601,7 +7601,7 @@ dwg_ent_dim_ang3pt_set_12_pt(dwg_ent_dim_ang3pt *ang, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_ang3pt_get_12_pt(dwg_ent_dim_ang3pt *ang, dwg_point_2d *point,
+dwg_ent_dim_ang3pt_get_12_pt(const dwg_ent_dim_ang3pt *ang, dwg_point_2d *point,
                              int *error)
 {
   if (ang != 0)
@@ -7642,7 +7642,7 @@ dwg_ent_dim_ang3pt_set_10_pt(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_ang3pt_get_10_pt(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
+dwg_ent_dim_ang3pt_get_10_pt(const dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
                              int *error)
 {
   if (ang != 0)
@@ -7684,7 +7684,7 @@ dwg_ent_dim_ang3pt_set_13_pt(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_ang3pt_get_13_pt(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point, 
+dwg_ent_dim_ang3pt_get_13_pt(const dwg_ent_dim_ang3pt *ang, dwg_point_3d *point, 
                              int *error)
 {
   if (ang != 0)
@@ -7726,7 +7726,7 @@ dwg_ent_dim_ang3pt_set_14_pt(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_ang3pt_get_14_pt(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
+dwg_ent_dim_ang3pt_get_14_pt(const dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
                              int *error)
 {
   if (ang != 0)
@@ -7769,7 +7769,7 @@ dwg_ent_dim_ang3pt_set_15_pt(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
 \param 3 int
 */
 void
-dwg_ent_dim_ang3pt_get_15_pt(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
+dwg_ent_dim_ang3pt_get_15_pt(const dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
                              int *error)
 {
   if (ang != 0)
@@ -7793,7 +7793,7 @@ dwg_ent_dim_ang3pt_get_15_pt(dwg_ent_dim_ang3pt *ang, dwg_point_3d *point,
 \param 2 int
 */
 double
-dwg_ent_dim_ang2ln_get_elevation_ecs11(dwg_ent_dim_ang2ln *ang, int *error)
+dwg_ent_dim_ang2ln_get_elevation_ecs11(const dwg_ent_dim_ang2ln *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7829,7 +7829,7 @@ dwg_ent_dim_ang2ln_set_elevation_ecs11(dwg_ent_dim_ang2ln *ang,
 \param 2 int
 */
 double
-dwg_ent_dim_ang2ln_get_elevation_ecs12(dwg_ent_dim_ang2ln *ang, int *error)
+dwg_ent_dim_ang2ln_get_elevation_ecs12(const dwg_ent_dim_ang2ln *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7865,7 +7865,7 @@ dwg_ent_dim_ang2ln_set_elevation_ecs12(dwg_ent_dim_ang2ln *ang,
 \param 2 int
 */
 char
-dwg_ent_dim_ang2ln_get_flags1(dwg_ent_dim_ang2ln *ang, int *error)
+dwg_ent_dim_ang2ln_get_flags1(const dwg_ent_dim_ang2ln *ang, int *error)
 {
   if (ang != 0)
     {
@@ -7900,7 +7900,7 @@ dwg_ent_dim_ang2ln_set_flags1(dwg_ent_dim_ang2ln *ang, char flag, int *error)
 \param 2 int
 */
 double
-dwg_ent_dim_ang2ln_get_act_measurement(dwg_ent_dim_ang2ln *ang,
+dwg_ent_dim_ang2ln_get_act_measurement(const dwg_ent_dim_ang2ln *ang,
                                        int *error)
 {
   if (ang != 0)
@@ -7937,7 +7937,7 @@ dwg_ent_dim_ang2ln_set_act_measurement(dwg_ent_dim_ang2ln *ang,
 \param 2 int
 */
 double
-dwg_ent_dim_ang2ln_get_horiz_dir(dwg_ent_dim_ang2ln *ang,
+dwg_ent_dim_ang2ln_get_horiz_dir(const dwg_ent_dim_ang2ln *ang,
                                  int *error)
 {
   if (ang != 0)
@@ -7970,7 +7970,7 @@ dwg_ent_dim_ang2ln_set_horiz_dir(dwg_ent_dim_ang2ln *ang,
 
 /// Returns dim ang2ln lspace factor
 double
-dwg_ent_dim_ang2ln_get_lspace_factor(dwg_ent_dim_ang2ln *ang,
+dwg_ent_dim_ang2ln_get_lspace_factor(const dwg_ent_dim_ang2ln *ang,
                                      int *error)
 {
   if (ang != 0)
@@ -7998,7 +7998,7 @@ dwg_ent_dim_ang2ln_set_lspace_factor(dwg_ent_dim_ang2ln *ang,
 
 /// Returns dim ang2ln lspace style
 unsigned int
-dwg_ent_dim_ang2ln_get_lspace_style(dwg_ent_dim_ang2ln *ang, int *error)
+dwg_ent_dim_ang2ln_get_lspace_style(const dwg_ent_dim_ang2ln *ang, int *error)
 {
   if (ang != 0)
     {
@@ -8025,7 +8025,7 @@ dwg_ent_dim_ang2ln_set_lspace_style(dwg_ent_dim_ang2ln *ang,
 
 /// Returns dim ang2ln attachment point
 unsigned int
-dwg_ent_dim_ang2ln_get_attachment_point(dwg_ent_dim_ang2ln *ang, int *error)
+dwg_ent_dim_ang2ln_get_attachment_point(const dwg_ent_dim_ang2ln *ang, int *error)
 {
   if (ang != 0)
     {
@@ -8068,7 +8068,7 @@ dwg_ent_dim_ang2ln_set_extrusion(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
 
 /// Returns dim ang2ln extrusion
 void
-dwg_ent_dim_ang2ln_get_extrusion(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
+dwg_ent_dim_ang2ln_get_extrusion(const dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
                                  int *error)
 {
   if (ang != 0)
@@ -8084,7 +8084,7 @@ dwg_ent_dim_ang2ln_get_extrusion(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
 
 /// Returns dim ang2ln user text
 char *
-dwg_ent_dim_ang2ln_get_user_text(dwg_ent_dim_ang2ln *ang, int *error)
+dwg_ent_dim_ang2ln_get_user_text(const dwg_ent_dim_ang2ln *ang, int *error)
 {
   if (ang != 0)
     {
@@ -8111,7 +8111,7 @@ dwg_ent_dim_ang2ln_set_user_text(dwg_ent_dim_ang2ln *ang, char * text,
 
 /// Returns dim ang2ln text rotation
 double
-dwg_ent_dim_ang2ln_get_text_rot(dwg_ent_dim_ang2ln *ang, int *error)
+dwg_ent_dim_ang2ln_get_text_rot(const dwg_ent_dim_ang2ln *ang, int *error)
 {
   if (ang != 0)
     {
@@ -8138,7 +8138,7 @@ dwg_ent_dim_ang2ln_set_text_rot(dwg_ent_dim_ang2ln *ang, double rot,
 
 /// Returns dim ang2ln ins rotation
 double
-dwg_ent_dim_ang2ln_get_ins_rotation(dwg_ent_dim_ang2ln *ang, int *error)
+dwg_ent_dim_ang2ln_get_ins_rotation(const dwg_ent_dim_ang2ln *ang, int *error)
 {
   if (ang != 0)
     {
@@ -8165,7 +8165,7 @@ dwg_ent_dim_ang2ln_set_ins_rotation(dwg_ent_dim_ang2ln *ang, double rot,
 
 /// Returns dim ang2ln flip arrow 1
 char
-dwg_ent_dim_ang2ln_get_flip_arrow1(dwg_ent_dim_ang2ln *ang, int *error)
+dwg_ent_dim_ang2ln_get_flip_arrow1(const dwg_ent_dim_ang2ln *ang, int *error)
 {
   if (ang != 0)
     {
@@ -8192,7 +8192,7 @@ dwg_ent_dim_ang2ln_set_flip_arrow1(dwg_ent_dim_ang2ln *ang, char flip_arrow,
 
 /// Returns dim ang2ln flip arrow 2
 char
-dwg_ent_dim_ang2ln_get_flip_arrow2(dwg_ent_dim_ang2ln *ang, int *error)
+dwg_ent_dim_ang2ln_get_flip_arrow2(const dwg_ent_dim_ang2ln *ang, int *error)
 {
   if (ang != 0)
     {
@@ -8234,7 +8234,7 @@ dwg_ent_dim_ang2ln_set_text_mid_pt(dwg_ent_dim_ang2ln *ang,
 
 /// Returns dim ang2ln text mid point
 void
-dwg_ent_dim_ang2ln_get_text_mid_pt(dwg_ent_dim_ang2ln *ang,
+dwg_ent_dim_ang2ln_get_text_mid_pt(const dwg_ent_dim_ang2ln *ang,
                                    dwg_point_2d *point, int *error)
 {
   if (ang != 0)
@@ -8265,7 +8265,7 @@ dwg_ent_dim_ang2ln_set_ins_scale(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
 
 /// Returns dim ang2ln ins scale points
 void
-dwg_ent_dim_ang2ln_get_ins_scale(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
+dwg_ent_dim_ang2ln_get_ins_scale(const dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
                                  int *error)
 {
   if (ang != 0)
@@ -8296,7 +8296,7 @@ dwg_ent_dim_ang2ln_set_12_pt(dwg_ent_dim_ang2ln *ang, dwg_point_2d *point,
 
 /// Returns dim ang2ln 12 point
 void
-dwg_ent_dim_ang2ln_get_12_pt(dwg_ent_dim_ang2ln *ang, dwg_point_2d *point,
+dwg_ent_dim_ang2ln_get_12_pt(const dwg_ent_dim_ang2ln *ang, dwg_point_2d *point,
                              int *error)
 {
   if (ang != 0)
@@ -8327,7 +8327,7 @@ dwg_ent_dim_ang2ln_set_10_pt(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
 
 /// Returns dim ang2ln 10 point
 void
-dwg_ent_dim_ang2ln_get_10_pt(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
+dwg_ent_dim_ang2ln_get_10_pt(const dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
                              int *error)
 {
   if (ang != 0)
@@ -8359,7 +8359,7 @@ dwg_ent_dim_ang2ln_set_13_pt(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
 
 /// Returns dim ang2ln 13 point
 void
-dwg_ent_dim_ang2ln_get_13_pt(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
+dwg_ent_dim_ang2ln_get_13_pt(const dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
                              int *error)
 {
   if (ang != 0)
@@ -8391,7 +8391,7 @@ dwg_ent_dim_ang2ln_set_14_pt(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
 
 /// Returns dim ang2ln 14 point
 void
-dwg_ent_dim_ang2ln_get_14_pt(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
+dwg_ent_dim_ang2ln_get_14_pt(const dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
                              int *error)
 {
   if (ang != 0)
@@ -8424,7 +8424,7 @@ dwg_ent_dim_ang2ln_set_15_pt(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
 
 /// Returns dim ang2ln 15 point
 void
-dwg_ent_dim_ang2ln_get_15_pt(dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
+dwg_ent_dim_ang2ln_get_15_pt(const dwg_ent_dim_ang2ln *ang, dwg_point_3d *point,
                              int *error)
 {
   if (ang != 0)
@@ -8456,7 +8456,7 @@ dwg_ent_dim_ang2ln_set_16_pt(dwg_ent_dim_ang2ln *ang, dwg_point_2d *point,
 
 /// Returns dim ang2ln 16 point
 void
-dwg_ent_dim_ang2ln_get_16_pt(dwg_ent_dim_ang2ln *ang, dwg_point_2d *point,
+dwg_ent_dim_ang2ln_get_16_pt(const dwg_ent_dim_ang2ln *ang, dwg_point_2d *point,
                              int *error)
 {
   if (ang != 0)
@@ -8479,7 +8479,7 @@ dwg_ent_dim_ang2ln_get_16_pt(dwg_ent_dim_ang2ln *ang, dwg_point_2d *point,
 \param 2 int
 */
 double
-dwg_ent_dim_radius_get_elevation_ecs11(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_elevation_ecs11(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8515,7 +8515,7 @@ dwg_ent_dim_radius_set_elevation_ecs11(dwg_ent_dim_radius *radius,
 \param 2 int
 */
 double
-dwg_ent_dim_radius_get_elevation_ecs12(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_elevation_ecs12(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8547,7 +8547,7 @@ dwg_ent_dim_radius_set_elevation_ecs12(dwg_ent_dim_radius *radius,
 
 /// Returns dim radius flags 1
 char
-dwg_ent_dim_radius_get_flags1(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_flags1(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8574,7 +8574,7 @@ dwg_ent_dim_radius_set_flags1(dwg_ent_dim_radius *radius, char flag,
 
 /// Returns dim radius act measurement
 double
-dwg_ent_dim_radius_get_act_measurement(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_act_measurement(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8601,7 +8601,7 @@ dwg_ent_dim_radius_set_act_measurement(dwg_ent_dim_radius *radius,
 
 /// Returns dim radius horiz dir
 double
-dwg_ent_dim_radius_get_horiz_dir(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_horiz_dir(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8628,7 +8628,7 @@ dwg_ent_dim_radius_set_horiz_dir(dwg_ent_dim_radius *radius, double horiz_dir,
 
 /// Returns dim radius lspace factor
 double
-dwg_ent_dim_radius_get_lspace_factor(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_lspace_factor(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8655,7 +8655,7 @@ dwg_ent_dim_radius_set_lspace_factor(dwg_ent_dim_radius *radius, double factor,
 
 /// Returns dim radius lspace style
 unsigned int
-dwg_ent_dim_radius_get_lspace_style(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_lspace_style(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8682,7 +8682,7 @@ dwg_ent_dim_radius_set_lspace_style(dwg_ent_dim_radius *radius,
 
 /// Returns dim radius attachment point
 unsigned int
-dwg_ent_dim_radius_get_attachment_point(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_attachment_point(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8725,7 +8725,7 @@ dwg_ent_dim_radius_set_extrusion(dwg_ent_dim_radius *radius,
 
 /// Returns dim radius extrusion
 void
-dwg_ent_dim_radius_get_extrusion(dwg_ent_dim_radius *radius,
+dwg_ent_dim_radius_get_extrusion(const dwg_ent_dim_radius *radius,
                                  dwg_point_3d *point, int *error)
 {
   if (radius != 0)
@@ -8741,7 +8741,7 @@ dwg_ent_dim_radius_get_extrusion(dwg_ent_dim_radius *radius,
 
 /// Returns dim radius user text
 char *
-dwg_ent_dim_radius_get_user_text(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_user_text(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8768,7 +8768,7 @@ dwg_ent_dim_radius_set_user_text(dwg_ent_dim_radius *radius, char * text,
 
 /// Returns dim radius text rotation
 double
-dwg_ent_dim_radius_get_text_rot(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_text_rot(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8795,7 +8795,7 @@ dwg_ent_dim_radius_set_text_rot(dwg_ent_dim_radius *radius, double rot,
 
 /// Returns dim radius ins rotation
 double
-dwg_ent_dim_radius_get_ins_rotation(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_ins_rotation(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8822,7 +8822,7 @@ dwg_ent_dim_radius_set_ins_rotation(dwg_ent_dim_radius *radius, double rot,
 
 /// Returns dim radius flip arrow 1
 char
-dwg_ent_dim_radius_get_flip_arrow1(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_flip_arrow1(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8849,7 +8849,7 @@ dwg_ent_dim_radius_set_flip_arrow1(dwg_ent_dim_radius *radius, char flip_arrow,
 
 /// Returns dim radius flip arrow 2
 char
-dwg_ent_dim_radius_get_flip_arrow2(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_flip_arrow2(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -8891,7 +8891,7 @@ dwg_ent_dim_radius_set_text_mid_pt(dwg_ent_dim_radius *radius,
 
 /// Returns dim radius text mid point
 void
-dwg_ent_dim_radius_get_text_mid_pt(dwg_ent_dim_radius *radius,
+dwg_ent_dim_radius_get_text_mid_pt(const dwg_ent_dim_radius *radius,
                                    dwg_point_2d *point, int *error)
 {
   if (radius != 0)
@@ -8922,7 +8922,7 @@ dwg_ent_dim_radius_set_ins_scale(dwg_ent_dim_radius *radius,
 
 /// Returns dim radius ins scale
 void
-dwg_ent_dim_radius_get_ins_scale(dwg_ent_dim_radius *radius,
+dwg_ent_dim_radius_get_ins_scale(const dwg_ent_dim_radius *radius,
                                  dwg_point_3d *point, int *error)
 {
   if (radius != 0)
@@ -8954,7 +8954,7 @@ dwg_ent_dim_radius_set_12_pt(dwg_ent_dim_radius *radius, dwg_point_2d *point,
 
 /// Returns dim radius 12 point
 void
-dwg_ent_dim_radius_get_12_pt(dwg_ent_dim_radius *radius, dwg_point_2d *point,
+dwg_ent_dim_radius_get_12_pt(const dwg_ent_dim_radius *radius, dwg_point_2d *point,
                              int *error)
 {
   if (radius != 0)
@@ -8985,7 +8985,7 @@ dwg_ent_dim_radius_set_10_pt(dwg_ent_dim_radius *radius, dwg_point_3d *point,
 
 /// Returns dim radius 10 point
 void
-dwg_ent_dim_radius_get_10_pt(dwg_ent_dim_radius *radius, dwg_point_3d *point,
+dwg_ent_dim_radius_get_10_pt(const dwg_ent_dim_radius *radius, dwg_point_3d *point,
                              int *error)
 {
   if (radius != 0)
@@ -9018,7 +9018,7 @@ dwg_ent_dim_radius_set_15_pt(dwg_ent_dim_radius *radius, dwg_point_3d *point,
 
 /// Returns dim radius 15 point
 void
-dwg_ent_dim_radius_get_15_pt(dwg_ent_dim_radius *radius, dwg_point_3d *point,
+dwg_ent_dim_radius_get_15_pt(const dwg_ent_dim_radius *radius, dwg_point_3d *point,
                              int *error)
 {
   if (radius != 0)
@@ -9034,7 +9034,7 @@ dwg_ent_dim_radius_get_15_pt(dwg_ent_dim_radius *radius, dwg_point_3d *point,
 
 /// Returns dim radius leader length
 double
-dwg_ent_dim_radius_get_leader_length(dwg_ent_dim_radius *radius, int *error)
+dwg_ent_dim_radius_get_leader_length(const dwg_ent_dim_radius *radius, int *error)
 {
   if (radius != 0)
     {
@@ -9069,7 +9069,7 @@ dwg_ent_dim_radius_set_leader_length(dwg_ent_dim_radius *radius, double length,
 \param 2 int
 */
 double
-dwg_ent_dim_diameter_get_elevation_ecs11(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_elevation_ecs11(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9105,7 +9105,7 @@ dwg_ent_dim_diameter_set_elevation_ecs11(dwg_ent_dim_diameter *dia,
 \param 2 int
 */
 double
-dwg_ent_dim_diameter_get_elevation_ecs12(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_elevation_ecs12(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9137,7 +9137,7 @@ dwg_ent_dim_diameter_set_elevation_ecs12(dwg_ent_dim_diameter *dia,
 
 /// Returns dim diameter flags1 
 char
-dwg_ent_dim_diameter_get_flags1(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_flags1(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9164,7 +9164,7 @@ dwg_ent_dim_diameter_set_flags1(dwg_ent_dim_diameter *dia, char flag,
 
 /// Returns dim diameter act measurement 
 double
-dwg_ent_dim_diameter_get_act_measurement(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_act_measurement(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9191,7 +9191,7 @@ dwg_ent_dim_diameter_set_act_measurement(dwg_ent_dim_diameter *dia,
 
 /// Returns dim diameter horiz dir 
 double
-dwg_ent_dim_diameter_get_horiz_dir(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_horiz_dir(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9218,7 +9218,7 @@ dwg_ent_dim_diameter_set_horiz_dir(dwg_ent_dim_diameter *dia, double horiz_dir,
 
 /// Returns dim diameter lspace factor
 double
-dwg_ent_dim_diameter_get_lspace_factor(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_lspace_factor(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9244,7 +9244,7 @@ dwg_ent_dim_diameter_set_lspace_factor(dwg_ent_dim_diameter *dia,
 }
 /// Returns dim diameter lspace style
 unsigned int
-dwg_ent_dim_diameter_get_lspace_style(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_lspace_style(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9271,7 +9271,7 @@ dwg_ent_dim_diameter_set_lspace_style(dwg_ent_dim_diameter *dia,
 
 /// Returns dim diameter attachment point
 unsigned int
-dwg_ent_dim_diameter_get_attachment_point(dwg_ent_dim_diameter *dia,
+dwg_ent_dim_diameter_get_attachment_point(const dwg_ent_dim_diameter *dia,
                                           int *error)
 {
   if (dia != 0)
@@ -9315,7 +9315,7 @@ dwg_ent_dim_diameter_set_extrusion(dwg_ent_dim_diameter *dia,
 
 /// Returns dim diameter extrusion
 void
-dwg_ent_dim_diameter_get_extrusion(dwg_ent_dim_diameter *dia,
+dwg_ent_dim_diameter_get_extrusion(const dwg_ent_dim_diameter *dia,
                                    dwg_point_3d *point, int *error)
 {
   if (dia != 0)
@@ -9331,7 +9331,7 @@ dwg_ent_dim_diameter_get_extrusion(dwg_ent_dim_diameter *dia,
 
 /// Returns dim diameter user text
 char *
-dwg_ent_dim_diameter_get_user_text(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_user_text(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9358,7 +9358,7 @@ dwg_ent_dim_diameter_set_user_text(dwg_ent_dim_diameter *dia, char * text,
 
 /// Returns dim diameter text rotation 
 double
-dwg_ent_dim_diameter_get_text_rot(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_text_rot(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9385,7 +9385,7 @@ dwg_ent_dim_diameter_set_text_rot(dwg_ent_dim_diameter *dia, double rot,
 
 /// Returns dim diameter ins rotation
 double
-dwg_ent_dim_diameter_get_ins_rotation(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_ins_rotation(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9412,7 +9412,7 @@ dwg_ent_dim_diameter_set_ins_rotation(dwg_ent_dim_diameter *dia, double rot,
 
 /// Returns dim diameter flip arrow 1
 char
-dwg_ent_dim_diameter_get_flip_arrow1(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_flip_arrow1(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9439,7 +9439,7 @@ dwg_ent_dim_diameter_set_flip_arrow1(dwg_ent_dim_diameter *dia,
 
 /// Returns dim diameter flip arrow 2
 char
-dwg_ent_dim_diameter_get_flip_arrow2(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_flip_arrow2(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9481,7 +9481,7 @@ dwg_ent_dim_diameter_set_text_mid_pt(dwg_ent_dim_diameter *dia,
 
 /// Returns dim diameter text mid point
 void
-dwg_ent_dim_diameter_get_text_mid_pt(dwg_ent_dim_diameter *dia,
+dwg_ent_dim_diameter_get_text_mid_pt(const dwg_ent_dim_diameter *dia,
                                      dwg_point_2d *point, int *error)
 {
   if (dia != 0)
@@ -9512,7 +9512,7 @@ dwg_ent_dim_diameter_set_ins_scale(dwg_ent_dim_diameter *dia,
 
 /// Returns dim diameter ins scale
 void
-dwg_ent_dim_diameter_get_ins_scale(dwg_ent_dim_diameter *dia, 
+dwg_ent_dim_diameter_get_ins_scale(const dwg_ent_dim_diameter *dia, 
                                    dwg_point_3d *point, int *error)
 {
   if (dia != 0)
@@ -9543,7 +9543,7 @@ dwg_ent_dim_diameter_set_12_pt(dwg_ent_dim_diameter *dia, dwg_point_2d *point,
 
 /// Returns dim diameter 12 point
 void
-dwg_ent_dim_diameter_get_12_pt(dwg_ent_dim_diameter *dia, dwg_point_2d *point,
+dwg_ent_dim_diameter_get_12_pt(const dwg_ent_dim_diameter *dia, dwg_point_2d *point,
                                int *error)
 {
   if (dia != 0)
@@ -9574,7 +9574,7 @@ dwg_ent_dim_diameter_set_10_pt(dwg_ent_dim_diameter *dia, dwg_point_3d *point,
 
 /// Returns dim diameter 10 point
 void
-dwg_ent_dim_diameter_get_10_pt(dwg_ent_dim_diameter *dia, dwg_point_3d *point,
+dwg_ent_dim_diameter_get_10_pt(const dwg_ent_dim_diameter *dia, dwg_point_3d *point,
                                int *error)
 {
   if (dia != 0)
@@ -9607,7 +9607,7 @@ dwg_ent_dim_diameter_set_15_pt(dwg_ent_dim_diameter *dia, dwg_point_3d *point,
 
 /// Returns dim diameter 15 point
 void
-dwg_ent_dim_diameter_get_15_pt(dwg_ent_dim_diameter *dia, dwg_point_3d *point,
+dwg_ent_dim_diameter_get_15_pt(const dwg_ent_dim_diameter *dia, dwg_point_3d *point,
                                int *error)
 {
   if (dia != 0)
@@ -9623,7 +9623,7 @@ dwg_ent_dim_diameter_get_15_pt(dwg_ent_dim_diameter *dia, dwg_point_3d *point,
 
 /// Returns dim diameter leader length
 double
-dwg_ent_dim_diameter_get_leader_length(dwg_ent_dim_diameter *dia, int *error)
+dwg_ent_dim_diameter_get_leader_length(const dwg_ent_dim_diameter *dia, int *error)
 {
   if (dia != 0)
     {
@@ -9658,7 +9658,7 @@ dwg_ent_dim_diameter_set_leader_length(dwg_ent_dim_diameter *dia,
 \param 2 int
 */
 char
-dwg_ent_endblk_get_dummy(dwg_ent_endblk *endblk, int *error)
+dwg_ent_endblk_get_dummy(const dwg_ent_endblk *endblk, int *error)
 {
   if(endblk != 0)
     {
@@ -9697,7 +9697,7 @@ dwg_ent_endblk_set_dummy(dwg_ent_endblk *endblk, char dummy, int *error)
 \param 2 int
 */
 char
-dwg_ent_seqend_get_dummy(dwg_ent_seqend *seqend, int *error)
+dwg_ent_seqend_get_dummy(const dwg_ent_seqend *seqend, int *error)
 {
   if(seqend != 0)
     {
@@ -9732,7 +9732,7 @@ dwg_ent_seqend_set_dummy(dwg_ent_seqend *seqend, char dummy, int *error)
 
 /// Returns shape ins point
 void
-dwg_ent_shape_get_ins_pt(dwg_ent_shape *shape, dwg_point_3d *point, int *error)
+dwg_ent_shape_get_ins_pt(const dwg_ent_shape *shape, dwg_point_3d *point, int *error)
 {
   if(shape != 0)
     {
@@ -9762,7 +9762,7 @@ dwg_ent_shape_set_ins_pt(dwg_ent_shape *shape, dwg_point_3d *point, int *error)
 
 /// Returns shape scale
 double
-dwg_ent_shape_get_scale(dwg_ent_shape *shape, int *error)
+dwg_ent_shape_get_scale(const dwg_ent_shape *shape, int *error)
 {
   if(shape != 0)
     {
@@ -9788,7 +9788,7 @@ dwg_ent_shape_set_scale(dwg_ent_shape *shape, double scale, int *error)
 
 /// Returns shape rotation
 double
-dwg_ent_shape_get_rotation(dwg_ent_shape *shape, int *error)
+dwg_ent_shape_get_rotation(const dwg_ent_shape *shape, int *error)
 {
   if(shape != 0)
     {
@@ -9814,7 +9814,7 @@ dwg_ent_shape_set_rotation(dwg_ent_shape *shape, double rotation, int *error)
 
 /// Returns shape width factor
 double
-dwg_ent_shape_get_width_factor(dwg_ent_shape *shape, int *error)
+dwg_ent_shape_get_width_factor(const dwg_ent_shape *shape, int *error)
 {
   if(shape != 0)
     {
@@ -9841,7 +9841,7 @@ dwg_ent_shape_set_width_factor(dwg_ent_shape *shape, double width_factor,
 
 /// Returns shape oblique
 double
-dwg_ent_shape_get_oblique(dwg_ent_shape *shape, int *error)
+dwg_ent_shape_get_oblique(const dwg_ent_shape *shape, int *error)
 {
   if(shape != 0)
     {
@@ -9867,7 +9867,7 @@ dwg_ent_shape_set_oblique(dwg_ent_shape *shape, double oblique, int *error)
 
 /// Returns shape thickness
 double
-dwg_ent_shape_get_thickness(dwg_ent_shape *shape, int *error)
+dwg_ent_shape_get_thickness(const dwg_ent_shape *shape, int *error)
 {
   if(shape != 0)
     {
@@ -9894,7 +9894,7 @@ dwg_ent_shape_set_thickness(dwg_ent_shape *shape, double thickness,
 
 /// Returns shape shape no
 double
-dwg_ent_shape_get_shape_no(dwg_ent_shape *shape, int *error)
+dwg_ent_shape_get_shape_no(const dwg_ent_shape *shape, int *error)
 {
   if(shape != 0)
     {
@@ -9920,7 +9920,7 @@ dwg_ent_shape_set_shape_no(dwg_ent_shape *shape, double no, int *error)
 
 /// Returns shape extrusion
 void
-dwg_ent_shape_get_extrusion(dwg_ent_shape *shape, dwg_point_3d *point,
+dwg_ent_shape_get_extrusion(const dwg_ent_shape *shape, dwg_point_3d *point,
                             int *error)
 {
   if(shape != 0)
@@ -9973,7 +9973,7 @@ dwg_ent_mtext_set_insertion_pt(dwg_ent_mtext *mtext, dwg_point_3d *point,
 
 /// Returns mtext insertion point
 void
-dwg_ent_mtext_get_insertion_pt(dwg_ent_mtext *mtext, dwg_point_3d *point,
+dwg_ent_mtext_get_insertion_pt(const dwg_ent_mtext *mtext, dwg_point_3d *point,
                                int *error)
 {
   if(mtext != 0)
@@ -10007,7 +10007,7 @@ dwg_ent_mtext_set_extrusion(dwg_ent_mtext *mtext, dwg_point_3d *point,
 
 /// Returns mtext extrusion
 void
-dwg_ent_mtext_get_extrusion(dwg_ent_mtext *mtext, dwg_point_3d *point,
+dwg_ent_mtext_get_extrusion(const dwg_ent_mtext *mtext, dwg_point_3d *point,
                             int *error)
 {
   if(mtext != 0)
@@ -10041,7 +10041,7 @@ dwg_ent_mtext_set_x_axis_dir(dwg_ent_mtext *mtext, dwg_point_3d *point,
 
 /// Returns mtext x axis dir
 void
-dwg_ent_mtext_get_x_axis_dir(dwg_ent_mtext *mtext, dwg_point_3d *point,
+dwg_ent_mtext_get_x_axis_dir(const dwg_ent_mtext *mtext, dwg_point_3d *point,
                              int *error)
 {
   if(mtext != 0)
@@ -10073,7 +10073,7 @@ dwg_ent_mtext_set_rect_height(dwg_ent_mtext *mtext, double rect_height,
 
 /// Returns mtext rect height
 double
-dwg_ent_mtext_get_rect_height(dwg_ent_mtext *mtext, int *error)
+dwg_ent_mtext_get_rect_height(const dwg_ent_mtext *mtext, int *error)
 {
   if(mtext != 0)
     {
@@ -10102,7 +10102,7 @@ dwg_ent_mtext_set_rect_width(dwg_ent_mtext *mtext, double rect_width,
 
 /// Returns mtext rect width
 double
-dwg_ent_mtext_get_rect_width(dwg_ent_mtext *mtext, int *error)
+dwg_ent_mtext_get_rect_width(const dwg_ent_mtext *mtext, int *error)
 {
   if(mtext != 0)
     {
@@ -10131,7 +10131,7 @@ dwg_ent_mtext_set_text_height(dwg_ent_mtext *mtext, double text_height,
 
 /// Returns mtext text height
 double
-dwg_ent_mtext_get_text_height(dwg_ent_mtext *mtext, int *error)
+dwg_ent_mtext_get_text_height(const dwg_ent_mtext *mtext, int *error)
 {
   if(mtext != 0)
     {
@@ -10145,7 +10145,7 @@ dwg_ent_mtext_get_text_height(dwg_ent_mtext *mtext, int *error)
 
 /// Returns mtext attachment
 unsigned int
-dwg_ent_mtext_get_attachment(dwg_ent_mtext *mtext, int *error)
+dwg_ent_mtext_get_attachment(const dwg_ent_mtext *mtext, int *error)
 {
   if(mtext != 0)
     {
@@ -10174,7 +10174,7 @@ dwg_ent_mtext_set_attachment(dwg_ent_mtext *mtext, unsigned int attachment,
 
 /// Returns mtext drawing dir
 unsigned int
-dwg_ent_mtext_get_drawing_dir(dwg_ent_mtext *mtext, int *error)
+dwg_ent_mtext_get_drawing_dir(const dwg_ent_mtext *mtext, int *error)
 {
   if(mtext != 0)
     {
@@ -10203,7 +10203,7 @@ dwg_ent_mtext_set_drawing_dir(dwg_ent_mtext *mtext, unsigned int dir,
 
 /// Returns mtext extends ht
 double
-dwg_ent_mtext_get_extends_ht(dwg_ent_mtext *mtext, int *error)
+dwg_ent_mtext_get_extends_ht(const dwg_ent_mtext *mtext, int *error)
 {
   if(mtext != 0)
     {
@@ -10231,7 +10231,7 @@ dwg_ent_mtext_set_extends_ht(dwg_ent_mtext *mtext, double ht, int *error)
 
 /// Returns mtext extends wid
 double
-dwg_ent_mtext_get_extends_wid(dwg_ent_mtext *mtext, int *error)
+dwg_ent_mtext_get_extends_wid(const dwg_ent_mtext *mtext, int *error)
 {
   if(mtext != 0)
     {
@@ -10259,7 +10259,7 @@ dwg_ent_mtext_set_extends_wid(dwg_ent_mtext *mtext, double wid, int *error)
 
 /// Returns mtext text
 char *
-dwg_ent_mtext_get_text(dwg_ent_mtext *mtext, int *error)
+dwg_ent_mtext_get_text(const dwg_ent_mtext *mtext, int *error)
 {
   if(mtext != 0)
     {
@@ -10287,7 +10287,7 @@ dwg_ent_mtext_set_text(dwg_ent_mtext *mtext, char * text, int *error)
 
 /// Returns mtext linespace style
 unsigned int
-dwg_ent_mtext_get_linespace_style(dwg_ent_mtext *mtext, int *error)
+dwg_ent_mtext_get_linespace_style(const dwg_ent_mtext *mtext, int *error)
 {
   if(mtext != 0)
     {
@@ -10316,7 +10316,7 @@ dwg_ent_mtext_set_linespace_style(dwg_ent_mtext *mtext, unsigned int style,
 
 /// Returns mtext linespace factor
 double
-dwg_ent_mtext_get_linespace_factor(dwg_ent_mtext *mtext, int *error)
+dwg_ent_mtext_get_linespace_factor(const dwg_ent_mtext *mtext, int *error)
 {
   if(mtext != 0)
     {
@@ -10364,7 +10364,7 @@ dwg_ent_leader_set_annot_type(dwg_ent_leader *leader, unsigned int type,
 
 /// Returns leader annot type
 unsigned int
-dwg_ent_leader_get_annot_type(dwg_ent_leader *leader, int *error)
+dwg_ent_leader_get_annot_type(const dwg_ent_leader *leader, int *error)
 {
   if(leader != 0)
     {
@@ -10393,7 +10393,7 @@ dwg_ent_leader_set_path_type(dwg_ent_leader *leader, unsigned int type,
 
 /// Returns leader path type
 unsigned int
-dwg_ent_leader_get_path_type(dwg_ent_leader *leader, int *error)
+dwg_ent_leader_get_path_type(const dwg_ent_leader *leader, int *error)
 {
   if(leader != 0)
     {
@@ -10407,7 +10407,7 @@ dwg_ent_leader_get_path_type(dwg_ent_leader *leader, int *error)
 
 /// Returns leader numpts
 long
-dwg_ent_leader_get_numpts(dwg_ent_leader *leader, int *error)
+dwg_ent_leader_get_numpts(const dwg_ent_leader *leader, int *error)
 {
   if(leader != 0)
     {
@@ -10452,7 +10452,7 @@ dwg_ent_leader_set_end_pt_proj(dwg_ent_leader *leader, dwg_point_3d *point,
 
 /// Returns leader end point
 void
-dwg_ent_leader_get_end_pt_proj(dwg_ent_leader *leader, dwg_point_3d *point,
+dwg_ent_leader_get_end_pt_proj(const dwg_ent_leader *leader, dwg_point_3d *point,
                                int *error)
 {
   if(leader != 0)
@@ -10486,7 +10486,7 @@ dwg_ent_leader_set_extrusion(dwg_ent_leader *leader, dwg_point_3d *point,
 
 /// Returns leader extrusion value
 void
-dwg_ent_leader_get_extrusion(dwg_ent_leader *leader, dwg_point_3d *point,
+dwg_ent_leader_get_extrusion(const dwg_ent_leader *leader, dwg_point_3d *point,
                              int *error)
 {
   if(leader != 0)
@@ -10520,7 +10520,7 @@ dwg_ent_leader_set_x_direction(dwg_ent_leader *leader, dwg_point_3d *point,
 
 /// Returns leader x direction value
 void
-dwg_ent_leader_get_x_direction(dwg_ent_leader *leader, dwg_point_3d *point,
+dwg_ent_leader_get_x_direction(const dwg_ent_leader *leader, dwg_point_3d *point,
                                int *error)
 {
   if(leader != 0)
@@ -10554,7 +10554,7 @@ dwg_ent_leader_set_offset_to_block_ins_pt(dwg_ent_leader *leader,
 
 /// Returns leader offset to block ins point
 void
-dwg_ent_leader_get_offset_to_block_ins_pt(dwg_ent_leader *leader,
+dwg_ent_leader_get_offset_to_block_ins_pt(const dwg_ent_leader *leader,
                                           dwg_point_3d *point, int *error)
 {
   if(leader != 0)
@@ -10585,7 +10585,7 @@ dwg_ent_leader_set_dimgap(dwg_ent_leader *leader, double dimgap, int *error)
 
 /// Returns leader dimgap
 double
-dwg_ent_leader_get_dimgap(dwg_ent_leader *leader, int *error)
+dwg_ent_leader_get_dimgap(const dwg_ent_leader *leader, int *error)
 {
   if(leader != 0)
     {
@@ -10614,7 +10614,7 @@ dwg_ent_leader_set_box_height(dwg_ent_leader *leader, double height,
 
 /// Returns leader box height
 double
-dwg_ent_leader_get_box_height(dwg_ent_leader *leader, int *error)
+dwg_ent_leader_get_box_height(const dwg_ent_leader *leader, int *error)
 {
   if(leader != 0)
     {
@@ -10642,7 +10642,7 @@ dwg_ent_leader_set_box_width(dwg_ent_leader *leader, double width, int *error)
 
 /// Returns leader box width
 double
-dwg_ent_leader_get_box_width(dwg_ent_leader *leader, int *error)
+dwg_ent_leader_get_box_width(const dwg_ent_leader *leader, int *error)
 {
   if(leader != 0)
     {
@@ -10671,7 +10671,7 @@ dwg_ent_leader_set_hook_line_on_x_dir(dwg_ent_leader *leader, char hook,
 
 /// Returns leader hook line on x dir value
 char
-dwg_ent_leader_get_hook_line_on_x_dir(dwg_ent_leader *leader, int *error)
+dwg_ent_leader_get_hook_line_on_x_dir(const dwg_ent_leader *leader, int *error)
 {
   if(leader != 0)
     {
@@ -10699,7 +10699,7 @@ dwg_ent_leader_set_arrowhead_on(dwg_ent_leader *leader, char arrow, int *error)
 
 /// Returns leader arrow head on
 char
-dwg_ent_leader_get_arrowhead_on(dwg_ent_leader *leader, int *error)
+dwg_ent_leader_get_arrowhead_on(const dwg_ent_leader *leader, int *error)
 {
   if(leader != 0)
     {
@@ -10728,7 +10728,7 @@ dwg_ent_leader_set_arrowhead_type(dwg_ent_leader *leader, unsigned int type,
 
 /// Returns leader arrowhead type
 unsigned int
-dwg_ent_leader_get_arrowhead_type(dwg_ent_leader *leader, int *error)
+dwg_ent_leader_get_arrowhead_type(const dwg_ent_leader *leader, int *error)
 {
   if(leader != 0)
     {
@@ -10756,7 +10756,7 @@ dwg_ent_leader_set_dimasz(dwg_ent_leader *leader, double dimasz, int *error)
 
 /// Returns leader dimasz
 double
-dwg_ent_leader_get_dimasz(dwg_ent_leader *leader, int *error)
+dwg_ent_leader_get_dimasz(const dwg_ent_leader *leader, int *error)
 {
   if(leader != 0)
     {
@@ -10785,7 +10785,7 @@ dwg_ent_leader_set_byblock_color(dwg_ent_leader *leader, unsigned int color,
 
 /// Returns leader byblock color
 unsigned int
-dwg_ent_leader_get_byblock_color(dwg_ent_leader *leader, int *error)
+dwg_ent_leader_get_byblock_color(const dwg_ent_leader *leader, int *error)
 {
   if(leader != 0)
     {
@@ -10818,7 +10818,7 @@ dwg_ent_tolerance_set_height(dwg_ent_tolerance *tol, double height,
 
 /// Returns tolerance height
 double
-dwg_ent_tolerance_get_height(dwg_ent_tolerance *tol, int *error)
+dwg_ent_tolerance_get_height(const dwg_ent_tolerance *tol, int *error)
 {
   if(tol != 0)
     {
@@ -10847,7 +10847,7 @@ dwg_ent_tolerance_set_dimgap(dwg_ent_tolerance *tol, double dimgap,
 
 /// Returns tolerance dimgap
 double
-dwg_ent_tolerance_get_dimgap(dwg_ent_tolerance *tol, int *error)
+dwg_ent_tolerance_get_dimgap(const dwg_ent_tolerance *tol, int *error)
 {
   if(tol != 0)
     {
@@ -10878,7 +10878,7 @@ dwg_ent_tolerance_set_ins_pt(dwg_ent_tolerance *tol, dwg_point_3d *point,
 
 /// Returns tolerance insertion point
 void
-dwg_ent_tolerance_get_ins_pt(dwg_ent_tolerance *tol, dwg_point_3d *point,
+dwg_ent_tolerance_get_ins_pt(const dwg_ent_tolerance *tol, dwg_point_3d *point,
                              int *error)
 {
   if(tol != 0)
@@ -10912,7 +10912,7 @@ dwg_ent_tolerance_set_x_direction(dwg_ent_tolerance *tol, dwg_point_3d *point,
 
 /// Returns tolerance x direction
 void
-dwg_ent_tolerance_get_x_direction(dwg_ent_tolerance *tol, dwg_point_3d *point,
+dwg_ent_tolerance_get_x_direction(const dwg_ent_tolerance *tol, dwg_point_3d *point,
                                   int *error)
 {
   if(tol != 0)
@@ -10946,7 +10946,7 @@ dwg_ent_tolerance_set_extrusion(dwg_ent_tolerance *tol, dwg_point_3d *point,
 
 /// Returns tolerance extrusion
 void
-dwg_ent_tolerance_get_extrusion(dwg_ent_tolerance *tol, dwg_point_3d *point,
+dwg_ent_tolerance_get_extrusion(const dwg_ent_tolerance *tol, dwg_point_3d *point,
                                 int *error)
 {
   if(tol != 0)
@@ -10978,7 +10978,7 @@ dwg_ent_tolerance_set_text_string(dwg_ent_tolerance *tol, char * string,
 
 /// Returns tolerance text string
 char *
-dwg_ent_tolerance_get_text_string(dwg_ent_tolerance *tol, int *error)
+dwg_ent_tolerance_get_text_string(const dwg_ent_tolerance *tol, int *error)
 {
   if(tol != 0)
     {
@@ -10995,7 +10995,7 @@ dwg_ent_tolerance_get_text_string(dwg_ent_tolerance *tol, int *error)
 ********************************************************************/
 /// Returns lwpline flags
 char 
-dwg_ent_lwpline_get_flags(dwg_ent_lwpline *lwpline, int *error)
+dwg_ent_lwpline_get_flags(const dwg_ent_lwpline *lwpline, int *error)
 {
   if(lwpline != 0)
     {
@@ -11021,7 +11021,7 @@ dwg_ent_lwpline_set_flags(dwg_ent_lwpline *lwpline, char flags, int *error)
 
 /// Returns lwpline const width
 double
-dwg_ent_lwpline_get_const_width(dwg_ent_lwpline *lwpline, int *error)
+dwg_ent_lwpline_get_const_width(const dwg_ent_lwpline *lwpline, int *error)
 {
   if(lwpline != 0)
     {
@@ -11047,7 +11047,7 @@ dwg_ent_lwpline_set_const_width(dwg_ent_lwpline *lwpline, double const_width,
 }
 /// Returns lwpline elevation
 double
-dwg_ent_lwpline_get_elevation(dwg_ent_lwpline *lwpline, int *error)
+dwg_ent_lwpline_get_elevation(const dwg_ent_lwpline *lwpline, int *error)
 {
   if(lwpline != 0)
     {
@@ -11073,7 +11073,7 @@ dwg_ent_lwpline_set_elevation(dwg_ent_lwpline *lwpline, double elevation,
 }
 /// Returns lwpline thickness
 double
-dwg_ent_lwpline_get_thickness(dwg_ent_lwpline *lwpline, int *error)
+dwg_ent_lwpline_get_thickness(const dwg_ent_lwpline *lwpline, int *error)
 {
   if(lwpline != 0)
     {
@@ -11099,7 +11099,7 @@ dwg_ent_lwpline_set_thickness(dwg_ent_lwpline *lwpline, double thickness,
 }
 /// Returns lwpline point count
 long
-dwg_ent_lwpline_get_num_points(dwg_ent_lwpline *lwpline, int *error)
+dwg_ent_lwpline_get_num_points(const dwg_ent_lwpline *lwpline, int *error)
 {
   if(lwpline != 0)
     {
@@ -11125,7 +11125,7 @@ dwg_ent_lwpline_set_num_points(dwg_ent_lwpline *lwpline, long num_points,
 }
 /// Returns lwpline bulges count
 long
-dwg_ent_lwpline_get_num_bulges(dwg_ent_lwpline *lwpline, int *error)
+dwg_ent_lwpline_get_num_bulges(const dwg_ent_lwpline *lwpline, int *error)
 {
   if(lwpline != 0)
     {
@@ -11151,7 +11151,7 @@ dwg_ent_lwpline_set_num_bulges(dwg_ent_lwpline *lwpline, long num_bulges,
 }
 /// Returns lwpline width count
 long
-dwg_ent_lwpline_get_num_widths(dwg_ent_lwpline *lwpline, int *error)
+dwg_ent_lwpline_get_num_widths(const dwg_ent_lwpline *lwpline, int *error)
 {
   if(lwpline != 0)
     {
@@ -11177,7 +11177,7 @@ dwg_ent_lwpline_set_num_widths(dwg_ent_lwpline *lwpline, long num_widths,
 }
 /// Returns lwpline normal
 void
-dwg_ent_lwpline_get_normal(dwg_ent_lwpline *lwpline, dwg_point_3d *points,
+dwg_ent_lwpline_get_normal(const dwg_ent_lwpline *lwpline, dwg_point_3d *points,
                            int *error)
 {
   if(lwpline != 0)
@@ -11208,7 +11208,7 @@ dwg_ent_lwpline_set_normal(dwg_ent_lwpline *lwpline, dwg_point_3d *points,
 }
 /// Returns lwpline bulges
 double *
-dwg_ent_lwpline_get_bulges(dwg_ent_lwpline *lwpline, int *error)
+dwg_ent_lwpline_get_bulges(const dwg_ent_lwpline *lwpline, int *error)
 {
   double *ptx = (double*) malloc(sizeof(double)* lwpline->num_bulges);
   if(ptx != 0)
@@ -11227,7 +11227,7 @@ dwg_ent_lwpline_get_bulges(dwg_ent_lwpline *lwpline, int *error)
 
 /// Returns lwpline points
 dwg_point_2d *
-dwg_ent_lwpline_get_points(dwg_ent_lwpline *lwpline, int *error)
+dwg_ent_lwpline_get_points(const dwg_ent_lwpline *lwpline, int *error)
 {
   dwg_point_2d *ptx = (dwg_point_2d*) 
   malloc(sizeof(dwg_point_2d)* lwpline->num_points);
@@ -11248,7 +11248,7 @@ dwg_ent_lwpline_get_points(dwg_ent_lwpline *lwpline, int *error)
 
 /// Returns lwpline widths
 dwg_lwpline_widths *
-dwg_ent_lwpline_get_widths(dwg_ent_lwpline *lwpline, int *error)
+dwg_ent_lwpline_get_widths(const dwg_ent_lwpline *lwpline, int *error)
 {
   dwg_lwpline_widths *ptx = (dwg_lwpline_widths*)
     malloc(sizeof(dwg_lwpline_widths)* lwpline->num_widths);
@@ -11273,7 +11273,7 @@ dwg_ent_lwpline_get_widths(dwg_ent_lwpline *lwpline, int *error)
 
 /// Returns ole2frame flags
 unsigned int
-dwg_ent_ole2frame_get_flags(dwg_ent_ole2frame *frame, int *error)
+dwg_ent_ole2frame_get_flags(const dwg_ent_ole2frame *frame, int *error)
 {
   if(frame != 0)
     {
@@ -11300,7 +11300,7 @@ dwg_ent_ole2frame_set_flags(dwg_ent_ole2frame *frame, unsigned int flags,
 
 /// Returns ole2frame mode
 unsigned int
-dwg_ent_ole2frame_get_mode(dwg_ent_ole2frame *frame, int *error)
+dwg_ent_ole2frame_get_mode(const dwg_ent_ole2frame *frame, int *error)
 {
   if(frame != 0)
     {
@@ -11327,7 +11327,7 @@ dwg_ent_ole2frame_set_mode(dwg_ent_ole2frame *frame, unsigned int mode,
 
 /// Returns ole2frame data length
 long
-dwg_ent_ole2frame_get_data_length(dwg_ent_ole2frame *frame, int *error)
+dwg_ent_ole2frame_get_data_length(const dwg_ent_ole2frame *frame, int *error)
 {
   if(frame != 0)
     {
@@ -11354,7 +11354,7 @@ dwg_ent_ole2frame_set_data_length(dwg_ent_ole2frame *frame, long data_length,
 
 /// Returns ole2frame data
 char *
-dwg_ent_ole2frame_get_data(dwg_ent_ole2frame *frame, int *error)
+dwg_ent_ole2frame_get_data(const dwg_ent_ole2frame *frame, int *error)
 {
   if(frame != 0)
     {
@@ -11384,7 +11384,7 @@ dwg_ent_ole2frame_set_data(dwg_ent_ole2frame *frame, char * data, int *error)
 
 /// Returns spline scenario
 unsigned int
-dwg_ent_spline_get_scenario(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_scenario(const dwg_ent_spline *spline, int *error)
 {
   if(spline != 0)
     {
@@ -11411,7 +11411,7 @@ dwg_ent_spline_set_scenario(dwg_ent_spline *spline, unsigned int scenario,
 
 /// Returns spline degree
 unsigned int
-dwg_ent_spline_get_degree(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_degree(const dwg_ent_spline *spline, int *error)
 {
   if(spline != 0)
     {
@@ -11438,7 +11438,7 @@ dwg_ent_spline_set_degree(dwg_ent_spline *spline, unsigned int degree,
 
 /// Returns spline fit tol
 double
-dwg_ent_spline_get_fit_tol(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_fit_tol(const dwg_ent_spline *spline, int *error)
 {
   if(spline != 0)
     {
@@ -11464,7 +11464,7 @@ dwg_ent_spline_set_fit_tol(dwg_ent_spline *spline, int fit_tol, int *error)
 
 /// Returns spline begin tan vector
 void
-dwg_ent_spline_get_begin_tan_vector(dwg_ent_spline *spline,
+dwg_ent_spline_get_begin_tan_vector(const dwg_ent_spline *spline,
                                        dwg_point_3d *point, int *error)
 {
   if(spline != 0)
@@ -11496,7 +11496,7 @@ dwg_ent_spline_set_begin_tan_vector(dwg_ent_spline *spline,
 
 /// Returns spline end tan vector points
 void
-dwg_ent_spline_get_end_tan_vector(dwg_ent_spline *spline,
+dwg_ent_spline_get_end_tan_vector(const dwg_ent_spline *spline,
                                      dwg_point_3d *point, int *error)
 {
   if(spline != 0)
@@ -11528,7 +11528,7 @@ dwg_ent_spline_set_end_tan_vector(dwg_ent_spline *spline,
 
 /// Returns spline knot tol value
 double
-dwg_ent_spline_get_knot_tol(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_knot_tol(const dwg_ent_spline *spline, int *error)
 {
   if(spline != 0)
     {
@@ -11555,7 +11555,7 @@ dwg_ent_spline_set_knot_tol(dwg_ent_spline *spline, double knot_tol,
 
 /// Returns spline control tol value
 double
-dwg_ent_spline_get_ctrl_tol(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_ctrl_tol(const dwg_ent_spline *spline, int *error)
 {
   if(spline != 0)
     {
@@ -11582,7 +11582,7 @@ dwg_ent_spline_set_ctrl_tol(dwg_ent_spline *spline, double ctrl_tol,
 
 /// Returns spline  number of fit points 
 unsigned int
-dwg_ent_spline_get_num_fit_pts(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_num_fit_pts(const dwg_ent_spline *spline, int *error)
 {
   if(spline != 0)
     {
@@ -11609,7 +11609,7 @@ dwg_ent_spline_set_num_fit_pts(dwg_ent_spline *spline, int num_fit_pts,
 
 /// Returns spline rational
 char
-dwg_ent_spline_get_rational(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_rational(const dwg_ent_spline *spline, int *error)
 {
   if(spline != 0)
     {
@@ -11636,7 +11636,7 @@ dwg_ent_spline_set_rational(dwg_ent_spline *spline, char rational,
 
 /// Returns spline closed_b
 char
-dwg_ent_spline_get_closed_b(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_closed_b(const dwg_ent_spline *spline, int *error)
 {
   if(spline != 0)
     {
@@ -11663,7 +11663,7 @@ dwg_ent_spline_set_closed_b(dwg_ent_spline *spline, char closed_b,
 
 /// Returns spline weighted value
 char
-dwg_ent_spline_get_weighted(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_weighted(const dwg_ent_spline *spline, int *error)
 {
   if(spline != 0)
     {
@@ -11690,7 +11690,7 @@ dwg_ent_spline_set_weighted(dwg_ent_spline *spline, char weighted,
 
 /// Returns spline periodic
 char
-dwg_ent_spline_get_periodic(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_periodic(const dwg_ent_spline *spline, int *error)
 {
   if(spline != 0)
     {
@@ -11717,7 +11717,7 @@ dwg_ent_spline_set_periodic(dwg_ent_spline *spline, char periodic,
 
 /// Returns spline knots number
 long
-dwg_ent_spline_get_num_knots(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_num_knots(const dwg_ent_spline *spline, int *error)
 {
   if(spline != 0)
     {
@@ -11743,7 +11743,7 @@ dwg_ent_spline_set_num_knots(dwg_ent_spline *spline, long nums, int *error)
 
 /// Returns spline control points number
 long
-dwg_ent_spline_get_num_ctrl_pts(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_num_ctrl_pts(const dwg_ent_spline *spline, int *error)
 {
   if(spline != 0)
     {
@@ -11770,7 +11770,7 @@ dwg_ent_spline_set_num_ctrl_pts(dwg_ent_spline *spline, long nums,
 
 /// Returns spline fit points
 dwg_ent_spline_point *
-dwg_ent_spline_get_fit_points(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_fit_points(const dwg_ent_spline *spline, int *error)
 {
   dwg_ent_spline_point *ptx = (dwg_ent_spline_point*)
   malloc(sizeof(dwg_ent_spline_point)* spline->num_fit_pts);
@@ -11790,7 +11790,7 @@ dwg_ent_spline_get_fit_points(dwg_ent_spline *spline, int *error)
 
 /// Returns spline control points
 dwg_ent_spline_control_point *
-dwg_ent_spline_get_ctrl_pts(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_ctrl_pts(const dwg_ent_spline *spline, int *error)
 {
   dwg_ent_spline_control_point *ptx = (dwg_ent_spline_control_point*) 
   malloc(sizeof(dwg_ent_spline_control_point)* spline->num_ctrl_pts);
@@ -11810,7 +11810,7 @@ dwg_ent_spline_get_ctrl_pts(dwg_ent_spline *spline, int *error)
 
 /// Returns spline knots
 double *
-dwg_ent_spline_get_knots(dwg_ent_spline *spline, int *error)
+dwg_ent_spline_get_knots(const dwg_ent_spline *spline, int *error)
 {
   double *ptx = (double*) malloc(sizeof(double)* spline->num_knots);
     if(ptx != 0)
@@ -11833,7 +11833,7 @@ dwg_ent_spline_get_knots(dwg_ent_spline *spline, int *error)
 
 /// Returns viewport center points
 void
-dwg_ent_viewport_get_center(dwg_ent_viewport *vp, dwg_point_3d *point,
+dwg_ent_viewport_get_center(const dwg_ent_viewport *vp, dwg_point_3d *point,
                             int *error)
 {
   if (vp != 0)
@@ -11865,7 +11865,7 @@ dwg_ent_viewport_set_center(dwg_ent_viewport *vp, dwg_point_3d *point,
 
 /// Returns viewport width
 double
-dwg_ent_viewport_get_width(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_width(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -11891,7 +11891,7 @@ dwg_ent_viewport_set_width(dwg_ent_viewport *vp, double width, int *error)
 
 /// Returns viewport height
 double
-dwg_ent_viewport_get_height(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_height(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -11917,7 +11917,7 @@ dwg_ent_viewport_set_height(dwg_ent_viewport *vp, double height, int *error)
 
 /// Returns viewport grid major
 unsigned int
-dwg_ent_viewport_get_grid_major(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_grid_major(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -11944,7 +11944,7 @@ dwg_ent_viewport_set_grid_major(dwg_ent_viewport *vp, unsigned int major,
 
 /// Returns viewport frozen layer count
 long
-dwg_ent_viewport_get_frozen_layer_count(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_frozen_layer_count(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -11971,7 +11971,7 @@ dwg_ent_viewport_set_frozen_layer_count(dwg_ent_viewport *vp, long count,
 
 /// Returns viewport style sheet
 char *
-dwg_ent_viewport_get_style_sheet(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_style_sheet(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12012,7 +12012,7 @@ dwg_ent_viewport_set_circle_zoom(dwg_ent_viewport *vp, unsigned int zoom,
 
 /// Returns circle zoom value
 unsigned int
-dwg_ent_viewport_get_circle_zoom(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_circle_zoom(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12038,7 +12038,7 @@ dwg_ent_viewport_set_status_flags(dwg_ent_viewport *vp, long flags, int *error)
 
 /// Returns viewport status flags
 long
-dwg_ent_viewport_get_status_flags(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_status_flags(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12051,7 +12051,7 @@ dwg_ent_viewport_get_status_flags(dwg_ent_viewport *vp, int *error)
 
 /// Returns viewport render mode
 char
-dwg_ent_viewport_get_render_mode(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_render_mode(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12091,7 +12091,7 @@ dwg_ent_viewport_set_ucs_at_origin(dwg_ent_viewport *vp, unsigned char origin,
 
 /// Returns viewport ucs at origini value
 unsigned char 
-dwg_ent_viewport_get_ucs_at_origin(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_ucs_at_origin(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12118,7 +12118,7 @@ dwg_ent_viewport_set_ucs_per_viewport(dwg_ent_viewport *vp,
 
 /// Returns viewport ucs per viewport
 unsigned char 
-dwg_ent_viewport_get_ucs_per_viewport(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_ucs_per_viewport(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12147,7 +12147,7 @@ dwg_ent_viewport_set_view_target(dwg_ent_viewport *vp, dwg_point_3d *point,
 
 /// Returns viewport view target
 void
-dwg_ent_viewport_get_view_target(dwg_ent_viewport *vp, dwg_point_3d *point,
+dwg_ent_viewport_get_view_target(const dwg_ent_viewport *vp, dwg_point_3d *point,
                                  int *error)
 {
   if (vp != 0)
@@ -12179,7 +12179,7 @@ dwg_ent_viewport_set_view_direction(dwg_ent_viewport *vp, dwg_point_3d *point,
 
 /// Returns viewport view direction
 void
-dwg_ent_viewport_get_view_direction(dwg_ent_viewport *vp, dwg_point_3d *point,
+dwg_ent_viewport_get_view_direction(const dwg_ent_viewport *vp, dwg_point_3d *point,
                                     int *error)
 {
   if (vp != 0)
@@ -12209,7 +12209,7 @@ dwg_ent_viewport_set_view_twist_angle(dwg_ent_viewport *vp, double angle,
 
 /// Returns view twist angle
 double
-dwg_ent_viewport_get_view_twist_angle(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_view_twist_angle(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12236,7 +12236,7 @@ dwg_ent_viewport_set_view_height(dwg_ent_viewport *vp, double height,
 
 /// Returns viewport view height
 double
-dwg_ent_viewport_get_view_height(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_view_height(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12263,7 +12263,7 @@ dwg_ent_viewport_set_lens_length(dwg_ent_viewport *vp, double length,
 
 /// Returns lens length 
 double
-dwg_ent_viewport_get_lens_length(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_lens_length(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12290,7 +12290,7 @@ dwg_ent_viewport_set_front_clip_z(dwg_ent_viewport *vp, double front_z,
 
 /// Returns viewport front clip z value
 double
-dwg_ent_viewport_get_front_clip_z(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_front_clip_z(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12317,7 +12317,7 @@ dwg_ent_viewport_set_back_clip_z(dwg_ent_viewport *vp, double back_z,
 
 /// Returns viewport back clip z value
 double
-dwg_ent_viewport_get_back_clip_z(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_back_clip_z(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12343,7 +12343,7 @@ dwg_ent_viewport_set_snap_angle(dwg_ent_viewport *vp, double angle, int *error)
 
 /// Returns viewport snap angle
 double
-dwg_ent_viewport_get_snap_angle(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_snap_angle(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12356,7 +12356,7 @@ dwg_ent_viewport_get_snap_angle(dwg_ent_viewport *vp, int *error)
 
 /// Returns viewport view center
 void
-dwg_ent_viewport_get_view_center(dwg_ent_viewport *vp, dwg_point_2d *point,
+dwg_ent_viewport_get_view_center(const dwg_ent_viewport *vp, dwg_point_2d *point,
                                  int *error)
 {
   if (vp != 0)
@@ -12386,7 +12386,7 @@ dwg_ent_viewport_set_view_center(dwg_ent_viewport *vp, dwg_point_2d *point,
 
 /// Returns grid spacing
 void
-dwg_ent_viewport_get_grid_spacing(dwg_ent_viewport *vp, dwg_point_2d *point,
+dwg_ent_viewport_get_grid_spacing(const dwg_ent_viewport *vp, dwg_point_2d *point,
                                   int *error)
 {
   if (vp != 0)
@@ -12416,7 +12416,7 @@ dwg_ent_viewport_set_grid_spacing(dwg_ent_viewport *vp, dwg_point_2d *point,
 
 /// Returns viewport snap base
 void
-dwg_ent_viewport_get_snap_base(dwg_ent_viewport *vp, dwg_point_2d *point,
+dwg_ent_viewport_get_snap_base(const dwg_ent_viewport *vp, dwg_point_2d *point,
                                int *error)
 {
   if (vp != 0)
@@ -12446,7 +12446,7 @@ dwg_ent_viewport_set_snap_base(dwg_ent_viewport *vp, dwg_point_2d *point,
 
 /// Returns viewport snap spacing
 void
-dwg_ent_viewport_get_snap_spacing(dwg_ent_viewport *vp, dwg_point_2d *point,
+dwg_ent_viewport_get_snap_spacing(const dwg_ent_viewport *vp, dwg_point_2d *point,
                                   int *error)
 {
   if (vp != 0)
@@ -12492,7 +12492,7 @@ dwg_ent_viewport_set_ucs_origin(dwg_ent_viewport *vp, dwg_point_3d *point,
 
 /// Returns viewport ucs origin
 void
-dwg_ent_viewport_get_ucs_origin(dwg_ent_viewport *vp, dwg_point_3d *point,
+dwg_ent_viewport_get_ucs_origin(const dwg_ent_viewport *vp, dwg_point_3d *point,
                                 int *error)
 {
   if (vp != 0)
@@ -12524,7 +12524,7 @@ dwg_ent_viewport_set_ucs_x_axis(dwg_ent_viewport *vp, dwg_point_3d *point,
 
 /// Returns viewport ucs X axis
 void
-dwg_ent_viewport_get_ucs_x_axis(dwg_ent_viewport *vp, dwg_point_3d *point,
+dwg_ent_viewport_get_ucs_x_axis(const dwg_ent_viewport *vp, dwg_point_3d *point,
                                 int *error)
 {
   if (vp != 0)
@@ -12556,7 +12556,7 @@ dwg_ent_viewport_set_ucs_y_axis(dwg_ent_viewport *vp, dwg_point_3d *point,
 
 /// Returns viewport ucs y axis
 void
-dwg_ent_viewport_get_ucs_y_axis(dwg_ent_viewport *vp, dwg_point_3d *point,
+dwg_ent_viewport_get_ucs_y_axis(const dwg_ent_viewport *vp, dwg_point_3d *point,
                                 int *error)
 {
   if (vp != 0)
@@ -12586,7 +12586,7 @@ dwg_ent_viewport_set_ucs_elevation(dwg_ent_viewport *vp, double elevation,
 
 /// Returns ucs elevation
 double
-dwg_ent_viewport_get_ucs_elevation(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_ucs_elevation(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12613,7 +12613,7 @@ dwg_ent_viewport_set_ucs_ortho_view_type(dwg_ent_viewport *vp,
 
 /// Returns UCS ortho view type
 unsigned int
-dwg_ent_viewport_get_ucs_ortho_view_type(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_ucs_ortho_view_type(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12640,7 +12640,7 @@ dwg_ent_viewport_set_shadeplot_mode(dwg_ent_viewport *vp,
 
 /// Returns shade plot mode value
 unsigned int
-dwg_ent_viewport_get_shadeplot_mode(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_shadeplot_mode(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12667,7 +12667,7 @@ dwg_ent_viewport_set_use_def_lights(dwg_ent_viewport *vp,
 
 /// Returns viewport default lightning usage
 unsigned char 
-dwg_ent_viewport_get_use_def_lights(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_use_def_lights(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12694,7 +12694,7 @@ dwg_ent_viewport_set_def_lighting_type(dwg_ent_viewport *vp, char type,
 
 /// Returns viewport default lightning type
 char 
-dwg_ent_viewport_get_def_lighting_type(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_def_lighting_type(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12721,7 +12721,7 @@ dwg_ent_viewport_set_brightness(dwg_ent_viewport *vp, double brightness,
 
 /// Returns viewport brightness
 double
-dwg_ent_viewport_get_brightness(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_brightness(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12748,7 +12748,7 @@ dwg_ent_viewport_set_contrast(dwg_ent_viewport *vp, double contrast,
 
 /// Returns viewport contrast
 double
-dwg_ent_viewport_get_contrast(dwg_ent_viewport *vp, int *error)
+dwg_ent_viewport_get_contrast(const dwg_ent_viewport *vp, int *error)
 {
   if (vp != 0)
     {
@@ -12765,7 +12765,7 @@ dwg_ent_viewport_get_contrast(dwg_ent_viewport *vp, int *error)
 
 /// Returns polyline pface num verts
 unsigned int
-dwg_ent_polyline_pface_get_numverts(dwg_ent_polyline_pface *pface, int *error)
+dwg_ent_polyline_pface_get_numverts(const dwg_ent_polyline_pface *pface, int *error)
 {
   if (pface != 0)
     {
@@ -12796,7 +12796,7 @@ dwg_ent_polyline_pface_set_numverts(dwg_ent_polyline_pface *pface,
 
 /// Returns polyline pface owned object count
 long
-dwg_ent_polyline_pface_get_owned_obj_count(dwg_ent_polyline_pface *pface,
+dwg_ent_polyline_pface_get_owned_obj_count(const dwg_ent_polyline_pface *pface,
                                            int *error)
 {
   if (pface != 0)
@@ -12828,7 +12828,7 @@ dwg_ent_polyline_pface_set_owned_obj_count(dwg_ent_polyline_pface *pface,
 
 /// Returns polyline pface numfaces
 unsigned int
-dwg_ent_polyline_pface_get_numfaces(dwg_ent_polyline_pface *pface, int *error)
+dwg_ent_polyline_pface_get_numfaces(const dwg_ent_polyline_pface *pface, int *error)
 {
   if (pface != 0)
     {
@@ -12863,7 +12863,7 @@ dwg_ent_polyline_pface_set_numfaces(dwg_ent_polyline_pface *pface,
 
 /// Returns polyline mesh flags
 unsigned int
-dwg_ent_polyline_mesh_get_flags(dwg_ent_polyline_mesh *mesh, int *error)
+dwg_ent_polyline_mesh_get_flags(const dwg_ent_polyline_mesh *mesh, int *error)
 {
   if (mesh != 0)
     {
@@ -12894,7 +12894,7 @@ dwg_ent_polyline_mesh_set_flags(dwg_ent_polyline_mesh *mesh,
 
 /// Returns polyline mesh curve type
 unsigned int
-dwg_ent_polyline_mesh_get_curve_type(dwg_ent_polyline_mesh *mesh, int *error)
+dwg_ent_polyline_mesh_get_curve_type(const dwg_ent_polyline_mesh *mesh, int *error)
 {
   if (mesh != 0)
     {
@@ -12925,7 +12925,7 @@ dwg_ent_polyline_mesh_set_curve_type(dwg_ent_polyline_mesh *mesh,
 
 /// Returns polyline mesh n vert count
 unsigned int
-dwg_ent_polyline_mesh_get_m_vert_count(dwg_ent_polyline_mesh *mesh,
+dwg_ent_polyline_mesh_get_m_vert_count(const dwg_ent_polyline_mesh *mesh,
                                        int *error)
 {
   if (mesh != 0)
@@ -12957,7 +12957,7 @@ dwg_ent_polyline_mesh_set_m_vert_count(dwg_ent_polyline_mesh *mesh,
 
 /// Returns polyline mesh n vert count
 unsigned int
-dwg_ent_polyline_mesh_get_n_vert_count(dwg_ent_polyline_mesh *mesh,
+dwg_ent_polyline_mesh_get_n_vert_count(const dwg_ent_polyline_mesh *mesh,
                                        int *error)
 {
   if (mesh != 0)
@@ -12989,7 +12989,7 @@ dwg_ent_polyline_mesh_set_n_vert_count(dwg_ent_polyline_mesh *mesh,
 
 /// Returns polyline mesh n density
 unsigned int
-dwg_ent_polyline_mesh_get_m_density(dwg_ent_polyline_mesh *mesh, int *error)
+dwg_ent_polyline_mesh_get_m_density(const dwg_ent_polyline_mesh *mesh, int *error)
 {
   if (mesh != 0)
     {
@@ -13020,7 +13020,7 @@ dwg_ent_polyline_mesh_set_m_density(dwg_ent_polyline_mesh *mesh,
 
 /// Returns polyline mesh n density
 unsigned int
-dwg_ent_polyline_mesh_get_n_density(dwg_ent_polyline_mesh *mesh, int *error)
+dwg_ent_polyline_mesh_get_n_density(const dwg_ent_polyline_mesh *mesh, int *error)
 {
   if (mesh != 0)
     {
@@ -13051,7 +13051,7 @@ dwg_ent_polyline_mesh_set_n_density(dwg_ent_polyline_mesh *mesh,
 
 /// Returns polyline mesh owned object count
 long
-dwg_ent_polyline_mesh_get_owned_obj_count(dwg_ent_polyline_mesh *mesh,
+dwg_ent_polyline_mesh_get_owned_obj_count(const dwg_ent_polyline_mesh *mesh,
                                           int *error)
 {
   if (mesh != 0)
@@ -13087,7 +13087,7 @@ dwg_ent_polyline_mesh_set_owned_obj_count(dwg_ent_polyline_mesh *mesh,
 
 /// Returns polyline 2d extrusion
 void
-dwg_ent_polyline_2d_get_extrusion(dwg_ent_polyline_2d *line2d,
+dwg_ent_polyline_2d_get_extrusion(const dwg_ent_polyline_2d *line2d,
                                   dwg_point_3d *point, int *error)
 {
   if (line2d != 0)
@@ -13123,7 +13123,7 @@ dwg_ent_polyline_2d_set_extrusion(dwg_ent_polyline_2d *line2d,
 
 /// Returns polyline 2d start width
 double
-dwg_ent_polyline_2d_get_start_width(dwg_ent_polyline_2d *line2d, int *error)
+dwg_ent_polyline_2d_get_start_width(const dwg_ent_polyline_2d *line2d, int *error)
 {
   if (line2d != 0)
     {
@@ -13154,7 +13154,7 @@ dwg_ent_polyline_2d_set_start_width(dwg_ent_polyline_2d *line2d,
 
 /// Returns polyline 2d end width
 double
-dwg_ent_polyline_2d_get_end_width(dwg_ent_polyline_2d *line2d, int *error)
+dwg_ent_polyline_2d_get_end_width(const dwg_ent_polyline_2d *line2d, int *error)
 {
   if (line2d != 0)
     {
@@ -13185,7 +13185,7 @@ dwg_ent_polyline_2d_set_end_width(dwg_ent_polyline_2d *line2d,
 
 /// Returns polyline 2d thickness
 double
-dwg_ent_polyline_2d_get_thickness(dwg_ent_polyline_2d *line2d, int *error)
+dwg_ent_polyline_2d_get_thickness(const dwg_ent_polyline_2d *line2d, int *error)
 {
   if (line2d != 0)
     {
@@ -13216,7 +13216,7 @@ dwg_ent_polyline_2d_set_thickness(dwg_ent_polyline_2d *line2d,
 
 /// Returns polyline 2d elevation
 double
-dwg_ent_polyline_2d_get_elevation(dwg_ent_polyline_2d *line2d, int *error)
+dwg_ent_polyline_2d_get_elevation(const dwg_ent_polyline_2d *line2d, int *error)
 {
   if (line2d != 0)
     {
@@ -13247,7 +13247,7 @@ dwg_ent_polyline_2d_set_elevation(dwg_ent_polyline_2d *line2d,
 
 /// Returns polyline 2d flag
 unsigned int
-dwg_ent_polyline_2d_get_flags(dwg_ent_polyline_2d *line2d, int *error)
+dwg_ent_polyline_2d_get_flags(const dwg_ent_polyline_2d *line2d, int *error)
 {
   if (line2d != 0)
     {
@@ -13278,7 +13278,7 @@ dwg_ent_polyline_2d_set_flags(dwg_ent_polyline_2d *line2d, unsigned int flags,
 
 /// Returns curve type value
 unsigned int
-dwg_ent_polyline_2d_get_curve_type(dwg_ent_polyline_2d *line2d, int *error)
+dwg_ent_polyline_2d_get_curve_type(const dwg_ent_polyline_2d *line2d, int *error)
 {
   if (line2d != 0)
     {
@@ -13309,7 +13309,7 @@ dwg_ent_polyline_2d_set_curve_type(dwg_ent_polyline_2d *line2d,
 
 /// Returns owned object count
 long
-dwg_ent_polyline_2d_get_owned_obj_count(dwg_ent_polyline_2d *line2d,
+dwg_ent_polyline_2d_get_owned_obj_count(const dwg_ent_polyline_2d *line2d,
                                         int *error)
 {
   if (line2d != 0)
@@ -13345,7 +13345,7 @@ dwg_ent_polyline_2d_set_owned_obj_count(dwg_ent_polyline_2d *line2d,
 
 /// Returns polyline 3d flags1
 char
-dwg_ent_polyline_3d_get_flags_1(dwg_ent_polyline_3d *line3d, int *error)
+dwg_ent_polyline_3d_get_flags_1(const dwg_ent_polyline_3d *line3d, int *error)
 {
   if (line3d != 0)
     {
@@ -13376,7 +13376,7 @@ dwg_ent_polyline_3d_set_flags_1(dwg_ent_polyline_3d *line3d, char flags_1,
 
 /// Returns polyline 3d flags2
 char
-dwg_ent_polyline_3d_get_flags_2(dwg_ent_polyline_3d *line3d, int *error)
+dwg_ent_polyline_3d_get_flags_2(const dwg_ent_polyline_3d *line3d, int *error)
 {
   if (line3d != 0)
     {
@@ -13407,7 +13407,7 @@ dwg_ent_polyline_3d_set_flags_2(dwg_ent_polyline_3d *line3d, char flags_2,
 
 /// Returns polyline 3d owned object count
 long
-dwg_ent_polyline_3d_get_owned_obj_count(dwg_ent_polyline_3d *line3d,
+dwg_ent_polyline_3d_get_owned_obj_count(const dwg_ent_polyline_3d *line3d,
                                         int *error)
 {
   if (line3d != 0)
@@ -13447,7 +13447,7 @@ dwg_ent_polyline_3d_set_owned_obj_count(dwg_ent_polyline_3d *line3d,
 \param 2 int
 */
 unsigned int
-dwg_ent_3dface_get_invis_flags(dwg_ent_3dface *_3dface, int *error)
+dwg_ent_3dface_get_invis_flags(const dwg_ent_3dface *_3dface, int *error)
 {    
   if (_3dface != 0)
     {
@@ -13484,7 +13484,7 @@ dwg_ent_3dface_set_invis_flags(dwg_ent_3dface *_3dface,
 \param 3 int
 */
 void
-dwg_ent_3dface_get_corner1(dwg_ent_3dface *_3dface, dwg_point_2d *point,
+dwg_ent_3dface_get_corner1(const dwg_ent_3dface *_3dface, dwg_point_2d *point,
                            int *error)
 {    
   if (_3dface != 0)
@@ -13524,7 +13524,7 @@ dwg_ent_3dface_set_corner1(dwg_ent_3dface *_3dface, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_3dface_get_corner2(dwg_ent_3dface *_3dface, dwg_point_2d *point,
+dwg_ent_3dface_get_corner2(const dwg_ent_3dface *_3dface, dwg_point_2d *point,
                            int *error)
 {    
   if (_3dface != 0)
@@ -13564,7 +13564,7 @@ dwg_ent_3dface_set_corner2(dwg_ent_3dface *_3dface, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_3dface_get_corner3(dwg_ent_3dface *_3dface, dwg_point_2d *point,
+dwg_ent_3dface_get_corner3(const dwg_ent_3dface *_3dface, dwg_point_2d *point,
                            int *error)
 {    
   if (_3dface != 0)
@@ -13604,7 +13604,7 @@ dwg_ent_3dface_set_corner3(dwg_ent_3dface *_3dface, dwg_point_2d *point,
 \param 3 int
 */
 void
-dwg_ent_3dface_get_corner4(dwg_ent_3dface *_3dface, dwg_point_2d *point,
+dwg_ent_3dface_get_corner4(const dwg_ent_3dface *_3dface, dwg_point_2d *point,
                            int *error)
 {    
   if (_3dface != 0)
@@ -13643,7 +13643,7 @@ dwg_ent_3dface_set_corner4(dwg_ent_3dface *_3dface, dwg_point_2d *point,
 
 /// Returns image class version
 long
-dwg_ent_image_get_class_version(dwg_ent_image *image, int *error)
+dwg_ent_image_get_class_version(const dwg_ent_image *image, int *error)
 {
   if (image != 0)
     {
@@ -13670,7 +13670,7 @@ dwg_ent_image_set_class_version(dwg_ent_image *image, long class_version,
 
 /// Returns image point 0 points
 void
-dwg_ent_image_get_pt0(dwg_ent_image *image, dwg_point_3d *point, int *error)
+dwg_ent_image_get_pt0(const dwg_ent_image *image, dwg_point_3d *point, int *error)
 {
   if (image != 0)
     {
@@ -13700,7 +13700,7 @@ dwg_ent_image_set_pt0(dwg_ent_image *image, dwg_point_3d *point, int *error)
 
 /// Returns image U_vector points
 void
-dwg_ent_image_get_u_vector(dwg_ent_image *image, dwg_point_3d *point,
+dwg_ent_image_get_u_vector(const dwg_ent_image *image, dwg_point_3d *point,
  int *error)
 {
   if (image != 0)
@@ -13732,7 +13732,7 @@ dwg_ent_image_set_u_vector(dwg_ent_image *image, dwg_point_3d *point,
 
 /// Returns image v_vector points
 void
-dwg_ent_image_get_v_vector(dwg_ent_image *image, dwg_point_3d *point,
+dwg_ent_image_get_v_vector(const dwg_ent_image *image, dwg_point_3d *point,
                            int *error)
 {
   if (image != 0)
@@ -13764,7 +13764,7 @@ dwg_ent_image_set_v_vector(dwg_ent_image *image, dwg_point_3d *point,
 
 /// Returns image size height
 double
-dwg_ent_image_get_size_height(dwg_ent_image *image, int *error)
+dwg_ent_image_get_size_height(const dwg_ent_image *image, int *error)
 {
   if (image != 0)
     {
@@ -13791,7 +13791,7 @@ dwg_ent_image_set_size_height(dwg_ent_image *image, double size_height,
 
 /// Returns image size width
 double
-dwg_ent_image_get_size_width(dwg_ent_image *image, int *error)
+dwg_ent_image_get_size_width(const dwg_ent_image *image, int *error)
 {
   if (image != 0)
     {
@@ -13818,7 +13818,7 @@ dwg_ent_image_set_size_width(dwg_ent_image *image, double size_width,
 
 /// Returns image display props
 unsigned int
-dwg_ent_image_get_display_props(dwg_ent_image *image, int *error)
+dwg_ent_image_get_display_props(const dwg_ent_image *image, int *error)
 {
   if (image != 0)
     {
@@ -13845,7 +13845,7 @@ dwg_ent_image_set_display_props(dwg_ent_image *image,
 
 /// Returns image clipping
 unsigned char
-dwg_ent_image_get_clipping(dwg_ent_image *image, int *error)
+dwg_ent_image_get_clipping(const dwg_ent_image *image, int *error)
 {
   if (image != 0)
     {
@@ -13872,7 +13872,7 @@ dwg_ent_image_set_clipping(dwg_ent_image *image, unsigned char clipping,
 
 /// Returns image brightness
 char
-dwg_ent_image_get_brightness(dwg_ent_image *image, int *error)
+dwg_ent_image_get_brightness(const dwg_ent_image *image, int *error)
 {
   if (image != 0)
     {
@@ -13898,7 +13898,7 @@ dwg_ent_image_set_brightness(dwg_ent_image *image, char brightness, int *error)
 
 /// Return image contrast
 char
-dwg_ent_image_get_contrast(dwg_ent_image *image, int *error)
+dwg_ent_image_get_contrast(const dwg_ent_image *image, int *error)
 {
   if (image != 0)
     {
@@ -13924,7 +13924,7 @@ dwg_ent_image_set_contrast(dwg_ent_image *image, char contrast, int *error)
 
 /// Returns image fade
 char
-dwg_ent_image_get_fade(dwg_ent_image *image, int *error)
+dwg_ent_image_get_fade(const dwg_ent_image *image, int *error)
 {
   if (image != 0)
     {
@@ -13950,7 +13950,7 @@ dwg_ent_image_set_fade(dwg_ent_image *image, char fade, int *error)
 
 /// Returns image clip boundary type
 unsigned int
-dwg_ent_image_get_clip_boundary_type(dwg_ent_image *image, int *error)
+dwg_ent_image_get_clip_boundary_type(const dwg_ent_image *image, int *error)
 {
   if (image != 0)
     {
@@ -13977,7 +13977,7 @@ dwg_ent_image_set_clip_boundary_type(dwg_ent_image *image, unsigned int type,
 
 /// Returns image boundary point 0
 void
-dwg_ent_image_get_boundary_pt0(dwg_ent_image *image, dwg_point_2d *point,
+dwg_ent_image_get_boundary_pt0(const dwg_ent_image *image, dwg_point_2d *point,
                                int *error)
 {
   if (image != 0)
@@ -14007,7 +14007,7 @@ dwg_ent_image_set_boundary_pt0(dwg_ent_image *image, dwg_point_2d *point,
 
 /// Returns boundary point1
 void
-dwg_ent_image_get_boundary_pt1(dwg_ent_image *image, dwg_point_2d *point,
+dwg_ent_image_get_boundary_pt1(const dwg_ent_image *image, dwg_point_2d *point,
                                int *error)
 {
   if (image != 0)
@@ -14037,7 +14037,7 @@ dwg_ent_image_set_boundary_pt1(dwg_ent_image *image, dwg_point_2d *point,
 
 /// Retuns number of clip verts
 double
-dwg_ent_image_get_num_clip_verts(dwg_ent_image *image, int *error)
+dwg_ent_image_get_num_clip_verts(const dwg_ent_image *image, int *error)
 {
   if (image != 0)
     {
@@ -14063,7 +14063,7 @@ dwg_ent_image_set_num_clip_verts(dwg_ent_image *image, double num, int *error)
 
 /// Returns image clip verts
 dwg_ent_image_clip_vert *
-dwg_ent_image_get_clip_verts(dwg_ent_image *image, int *error)
+dwg_ent_image_get_clip_verts(const dwg_ent_image *image, int *error)
 {
   dwg_ent_image_clip_vert *ptx = (dwg_ent_image_clip_vert*) 
   malloc(sizeof(dwg_ent_image_clip_vert)* image->num_clip_verts);
@@ -14100,7 +14100,7 @@ dwg_ent_mline_set_scale(dwg_ent_mline *mline, double scale, int *error)
 
 /// Returns scale value
 double
-dwg_ent_mline_get_scale(dwg_ent_mline *mline, int *error)
+dwg_ent_mline_get_scale(const dwg_ent_mline *mline, int *error)
 {
   if (mline != 0)
     {
@@ -14126,7 +14126,7 @@ dwg_ent_mline_set_just(dwg_ent_mline *mline, char just, int *error)
 
 /// Returns just value
 char
-dwg_ent_mline_get_just(dwg_ent_mline *mline, int *error)
+dwg_ent_mline_get_just(const dwg_ent_mline *mline, int *error)
 {
   if (mline != 0)
     {
@@ -14155,7 +14155,7 @@ dwg_ent_mline_set_base_point(dwg_ent_mline *mline, dwg_point_3d *point,
 
 /// Returns base point value
 void
-dwg_ent_mline_get_base_point(dwg_ent_mline *mline, dwg_point_3d *point,
+dwg_ent_mline_get_base_point(const dwg_ent_mline *mline, dwg_point_3d *point,
                              int *error)
 {
   if (mline != 0)
@@ -14187,7 +14187,7 @@ dwg_ent_mline_set_extrusion(dwg_ent_mline *mline, dwg_point_3d *point,
 
 /// Returns extrusion points
 void
-dwg_ent_mline_get_extrusion(dwg_ent_mline *mline, dwg_point_3d *point,
+dwg_ent_mline_get_extrusion(const dwg_ent_mline *mline, dwg_point_3d *point,
                             int *error)
 {
   if (mline != 0)
@@ -14217,7 +14217,7 @@ dwg_ent_mline_set_open_closed(dwg_ent_mline *mline, unsigned int oc,
 
 /// Returns open/closed value
 unsigned int
-dwg_ent_mline_get_open_closed(dwg_ent_mline *mline, int *error)
+dwg_ent_mline_get_open_closed(const dwg_ent_mline *mline, int *error)
 {
   if (mline != 0)
     {
@@ -14243,7 +14243,7 @@ dwg_ent_mline_set_num_lines(dwg_ent_mline *mline, char num, int *error)
 
 /// Returns number of lines
 char
-dwg_ent_mline_get_num_lines(dwg_ent_mline *mline, int *error)
+dwg_ent_mline_get_num_lines(const dwg_ent_mline *mline, int *error)
 {
   if (mline != 0)
     {
@@ -14270,7 +14270,7 @@ dwg_ent_mline_set_num_verts(dwg_ent_mline *mline, unsigned int num,
 
 /// Returns number of vertices
 unsigned int
-dwg_ent_mline_get_num_verts(dwg_ent_mline *mline, int *error)
+dwg_ent_mline_get_num_verts(const dwg_ent_mline *mline, int *error)
 {
   if (mline != 0)
     {
@@ -14283,7 +14283,7 @@ dwg_ent_mline_get_num_verts(dwg_ent_mline *mline, int *error)
 
 /// Returns mline vertices
 dwg_ent_mline_vert *
-dwg_ent_mline_get_verts(dwg_ent_mline *mline, int *error)
+dwg_ent_mline_get_verts(const dwg_ent_mline *mline, int *error)
 {
   dwg_ent_mline_vert *ptx = (dwg_ent_mline_vert*) 
   malloc(sizeof(dwg_ent_mline_vert)* mline->num_verts);
@@ -14307,7 +14307,7 @@ dwg_ent_mline_get_verts(dwg_ent_mline *mline, int *error)
 
 /// Returns vertex_pface vertind
 unsigned int
-dwg_ent_vertex_pface_face_get_vertind(dwg_ent_vert_pface_face *face)
+dwg_ent_vertex_pface_face_get_vertind(const dwg_ent_vert_pface_face *face)
 {
   return face->vertind[4];
 }
@@ -14329,7 +14329,7 @@ dwg_ent_vertex_pface_face_set_vertind(dwg_ent_vert_pface_face *face,
 
 /// Returns acis empty value
 unsigned char
-dwg_ent_3dsolid_get_acis_empty(dwg_ent_3dsolid *_3dsolid, int *error)
+dwg_ent_3dsolid_get_acis_empty(const dwg_ent_3dsolid *_3dsolid, int *error)
 {
   if (_3dsolid != 0)
     {
@@ -14356,7 +14356,7 @@ dwg_ent_3dsolid_set_acis_empty(dwg_ent_3dsolid *_3dsolid, unsigned char acis,
 
 /// Returns version value
 unsigned int
-dwg_ent_3dsolid_get_version(dwg_ent_3dsolid *_3dsolid, int *error)
+dwg_ent_3dsolid_get_version(const dwg_ent_3dsolid *_3dsolid, int *error)
 {
   if (_3dsolid != 0)
     {
@@ -14383,7 +14383,7 @@ dwg_ent_3dsolid_set_version(dwg_ent_3dsolid *_3dsolid, unsigned int version,
 
 /// Returns block size
 long *
-dwg_ent_3dsolid_get_block_size(dwg_ent_3dsolid *_3dsolid, int *error)
+dwg_ent_3dsolid_get_block_size(const dwg_ent_3dsolid *_3dsolid, int *error)
 {
   if (_3dsolid != 0)
     {
@@ -14396,7 +14396,7 @@ dwg_ent_3dsolid_get_block_size(dwg_ent_3dsolid *_3dsolid, int *error)
 
 /// Returns acis data
 char *
-dwg_ent_3dsolid_get_acis_data(dwg_ent_3dsolid *_3dsolid, int *error)
+dwg_ent_3dsolid_get_acis_data(const dwg_ent_3dsolid *_3dsolid, int *error)
 {
   if (_3dsolid != 0)
     {
@@ -14423,7 +14423,7 @@ dwg_ent_3dsolid_set_acis_data(dwg_ent_3dsolid *_3dsolid,
 
 /// Returns wireframe data present value
 char
-dwg_ent_3dsolid_get_wireframe_data_present(dwg_ent_3dsolid *_3dsolid,
+dwg_ent_3dsolid_get_wireframe_data_present(const dwg_ent_3dsolid *_3dsolid,
                                            int *error)
 {
   if (_3dsolid != 0)
@@ -14451,7 +14451,7 @@ dwg_ent_3dsolid_set_wireframe_data_present(dwg_ent_3dsolid *_3dsolid,
 
 /// Returns point present value
 char
-dwg_ent_3dsolid_get_point_present(dwg_ent_3dsolid *_3dsolid, int *error)
+dwg_ent_3dsolid_get_point_present(const dwg_ent_3dsolid *_3dsolid, int *error)
 {
   if (_3dsolid != 0)
     {
@@ -14478,7 +14478,7 @@ dwg_ent_3dsolid_set_point_present(dwg_ent_3dsolid *_3dsolid, char point,
 
 /// Returns point value
 void
-dwg_ent_3dsolid_get_point(dwg_ent_3dsolid *_3dsolid, dwg_point_3d *point, 
+dwg_ent_3dsolid_get_point(const dwg_ent_3dsolid *_3dsolid, dwg_point_3d *point, 
                           int *error)
 {
   if (_3dsolid != 0)
@@ -14510,7 +14510,7 @@ dwg_ent_3dsolid_set_point(dwg_ent_3dsolid *_3dsolid, dwg_point_3d *point,
 
 /// Returns number of isolines
 long
-dwg_ent_3dsolid_get_num_isolines(dwg_ent_3dsolid *_3dsolid, int *error)
+dwg_ent_3dsolid_get_num_isolines(const dwg_ent_3dsolid *_3dsolid, int *error)
 {
   if (_3dsolid != 0)
     {
@@ -14537,7 +14537,7 @@ dwg_ent_3dsolid_set_num_isolines(dwg_ent_3dsolid *_3dsolid, long num,
 
 /// Returns isoline present value
 char
-dwg_ent_3dsolid_get_isoline_present(dwg_ent_3dsolid *_3dsolid, int *error)
+dwg_ent_3dsolid_get_isoline_present(const dwg_ent_3dsolid *_3dsolid, int *error)
 {
   if (_3dsolid != 0)
     {
@@ -14564,7 +14564,7 @@ dwg_ent_3dsolid_set_isoline_present(dwg_ent_3dsolid *_3dsolid, char iso,
 
 /// Returns number of wires
 long
-dwg_ent_3dsolid_get_num_wires(dwg_ent_3dsolid *_3dsolid, int *error)
+dwg_ent_3dsolid_get_num_wires(const dwg_ent_3dsolid *_3dsolid, int *error)
 {
   if (_3dsolid != 0)
     {
@@ -14590,7 +14590,7 @@ dwg_ent_3dsolid_set_num_wires(dwg_ent_3dsolid *_3dsolid, long num, int *error)
 
 /// Returns wire
 dwg_ent_solid_wire *
-dwg_ent_3dsolid_get_wire(dwg_ent_3dsolid *_3dsolid, int *error)
+dwg_ent_3dsolid_get_wire(const dwg_ent_3dsolid *_3dsolid, int *error)
 {
   dwg_ent_solid_wire *ptx = (dwg_ent_solid_wire*)
   malloc(sizeof(dwg_ent_solid_wire)* _3dsolid->num_wires);
@@ -14610,7 +14610,7 @@ dwg_ent_3dsolid_get_wire(dwg_ent_3dsolid *_3dsolid, int *error)
 
 /// Returns number of silhouettes
 long
-dwg_ent_3dsolid_get_num_silhouettes(dwg_ent_3dsolid *_3dsolid, int *error)
+dwg_ent_3dsolid_get_num_silhouettes(const dwg_ent_3dsolid *_3dsolid, int *error)
 {
   if (_3dsolid != 0)
     {
@@ -14637,7 +14637,7 @@ dwg_ent_3dsolid_set_num_silhouettes(dwg_ent_3dsolid *_3dsolid,
 
 /// Returns silhouette
 dwg_ent_solid_silhouette *
-dwg_ent_3dsolid_get_silhouette(dwg_ent_3dsolid *_3dsolid, int *error)
+dwg_ent_3dsolid_get_silhouette(const dwg_ent_3dsolid *_3dsolid, int *error)
 {
   dwg_ent_solid_silhouette *ptx = (dwg_ent_solid_silhouette*)
   malloc(sizeof(dwg_ent_solid_silhouette)* _3dsolid->num_silhouettes);
@@ -14658,7 +14658,7 @@ dwg_ent_3dsolid_get_silhouette(dwg_ent_3dsolid *_3dsolid, int *error)
 
 /// Returns acis empty 2 value
 unsigned char
-dwg_ent_3dsolid_get_acis_empty2(dwg_ent_3dsolid *_3dsolid, int *error)
+dwg_ent_3dsolid_get_acis_empty2(const dwg_ent_3dsolid *_3dsolid, int *error)
 {
   if (_3dsolid != 0)
     {
@@ -14689,7 +14689,7 @@ dwg_ent_3dsolid_set_acis_empty2(dwg_ent_3dsolid *_3dsolid, unsigned char acis,
 
 /// Returns acis empty value
 unsigned char
-dwg_ent_region_get_acis_empty(dwg_ent_region *region, int *error)
+dwg_ent_region_get_acis_empty(const dwg_ent_region *region, int *error)
 {
   if (region != 0)
     {
@@ -14716,7 +14716,7 @@ dwg_ent_region_set_acis_empty(dwg_ent_region *region, unsigned char acis,
 
 /// Returns version value
 unsigned int
-dwg_ent_region_get_version(dwg_ent_region *region, int *error)
+dwg_ent_region_get_version(const dwg_ent_region *region, int *error)
 {
   if (region != 0)
     {
@@ -14743,7 +14743,7 @@ dwg_ent_region_set_version(dwg_ent_region *region, unsigned int version,
 
 /// Returns block size
 long *
-dwg_ent_region_get_block_size(dwg_ent_region *region, int *error)
+dwg_ent_region_get_block_size(const dwg_ent_region *region, int *error)
 {
   if (region != 0)
     {
@@ -14756,7 +14756,7 @@ dwg_ent_region_get_block_size(dwg_ent_region *region, int *error)
 
 /// Returns acis data
 char *
-dwg_ent_region_get_acis_data(dwg_ent_region *region, int *error)
+dwg_ent_region_get_acis_data(const dwg_ent_region *region, int *error)
 {
   if (region != 0)
     {
@@ -14783,7 +14783,7 @@ dwg_ent_region_set_acis_data(dwg_ent_region *region, char * data,
 
 /// Returns wireframe data present value
 char
-dwg_ent_region_get_wireframe_data_present(dwg_ent_region *region, int *error)
+dwg_ent_region_get_wireframe_data_present(const dwg_ent_region *region, int *error)
 {
   if (region != 0)
     {
@@ -14810,7 +14810,7 @@ dwg_ent_region_set_wireframe_data_present(dwg_ent_region *region, char data,
 
 /// Returns point present value
 char
-dwg_ent_region_get_point_present(dwg_ent_region *region, int *error)
+dwg_ent_region_get_point_present(const dwg_ent_region *region, int *error)
 {
   if (region != 0)
     {
@@ -14837,7 +14837,7 @@ dwg_ent_region_set_point_present(dwg_ent_region *region, char point,
 
 /// Returns point value
 void
-dwg_ent_region_get_point(dwg_ent_region *region, dwg_point_3d *point,
+dwg_ent_region_get_point(const dwg_ent_region *region, dwg_point_3d *point,
                          int *error)
 {
   if (region != 0)
@@ -14869,7 +14869,7 @@ dwg_ent_region_set_point(dwg_ent_region *region, dwg_point_3d *point,
 
 /// Returns number of isolines
 long
-dwg_ent_region_get_num_isolines(dwg_ent_region *region, int *error)
+dwg_ent_region_get_num_isolines(const dwg_ent_region *region, int *error)
 {
   if (region != 0)
     {
@@ -14895,7 +14895,7 @@ dwg_ent_region_set_num_isolines(dwg_ent_region *region, long num, int *error)
 
 /// Returns isoline present value
 char
-dwg_ent_region_get_isoline_present(dwg_ent_region *region, int *error)
+dwg_ent_region_get_isoline_present(const dwg_ent_region *region, int *error)
 {
   if (region != 0)
     {
@@ -14922,7 +14922,7 @@ dwg_ent_region_set_isoline_present(dwg_ent_region *region, char iso,
 
 /// Returns number of wires
 long
-dwg_ent_region_get_num_wires(dwg_ent_region *region, int *error)
+dwg_ent_region_get_num_wires(const dwg_ent_region *region, int *error)
 {
   if (region != 0)
     {
@@ -14948,7 +14948,7 @@ dwg_ent_region_set_num_wires(dwg_ent_region *region, long num, int *error)
 
 /// Returns wire
 dwg_ent_solid_wire *
-dwg_ent_region_get_wire(dwg_ent_region *region, int *error)
+dwg_ent_region_get_wire(const dwg_ent_region *region, int *error)
 {
   dwg_ent_solid_wire *ptx = (dwg_ent_solid_wire*)
   malloc(sizeof(dwg_ent_solid_wire)* region->num_wires);
@@ -14968,7 +14968,7 @@ dwg_ent_region_get_wire(dwg_ent_region *region, int *error)
 
 /// Returns number of silhouettes
 long
-dwg_ent_region_get_num_silhouettes(dwg_ent_region *region, int *error)
+dwg_ent_region_get_num_silhouettes(const dwg_ent_region *region, int *error)
 {
   if (region != 0)
     {
@@ -14995,7 +14995,7 @@ dwg_ent_region_set_num_silhouettes(dwg_ent_region *region, long silhouettes,
 
 /// Returns silhouette
 dwg_ent_solid_silhouette *
-dwg_ent_region_get_silhouette(dwg_ent_region *region, int *error)
+dwg_ent_region_get_silhouette(const dwg_ent_region *region, int *error)
 {
   dwg_ent_solid_silhouette *ptx = (dwg_ent_solid_silhouette*)
   malloc(sizeof(dwg_ent_solid_silhouette)* region->num_silhouettes);
@@ -15015,7 +15015,7 @@ dwg_ent_region_get_silhouette(dwg_ent_region *region, int *error)
 
 /// Returns acis empty 2 value
 unsigned char
-dwg_ent_region_get_acis_empty2(dwg_ent_region *region, int *error)
+dwg_ent_region_get_acis_empty2(const dwg_ent_region *region, int *error)
 {
   if (region != 0)
     {
@@ -15045,7 +15045,7 @@ dwg_ent_region_set_acis_empty2(dwg_ent_region *region, unsigned char acis,
 ********************************************************************/
 /// Returns acis empty value
 unsigned char
-dwg_ent_body_get_acis_empty(dwg_ent_body *body, int *error)
+dwg_ent_body_get_acis_empty(const dwg_ent_body *body, int *error)
 {
   if (body != 0)
     {
@@ -15072,7 +15072,7 @@ dwg_ent_body_set_acis_empty(dwg_ent_body *body, unsigned char acis,
 
 /// Returns version value
 unsigned int
-dwg_ent_body_get_version(dwg_ent_body *body, int *error)
+dwg_ent_body_get_version(const dwg_ent_body *body, int *error)
 {
   if (body != 0)
     {
@@ -15098,7 +15098,7 @@ dwg_ent_body_set_version(dwg_ent_body *body, unsigned int version, int *error)
 
 /// Returns body block size
 long * 
-dwg_ent_body_get_block_size(dwg_ent_body *body, int *error)
+dwg_ent_body_get_block_size(const dwg_ent_body *body, int *error)
 {
   if (body != 0)
     {
@@ -15111,7 +15111,7 @@ dwg_ent_body_get_block_size(dwg_ent_body *body, int *error)
 
 /// Returns body acis data value
 char *
-dwg_ent_body_get_acis_data(dwg_ent_body *body, int *error)
+dwg_ent_body_get_acis_data(const dwg_ent_body *body, int *error)
 {
   if (body != 0)
     {
@@ -15137,7 +15137,7 @@ dwg_ent_body_set_acis_data(dwg_ent_body *body, char * data, int *error)
 
 /// Returns wireframe data present value
 char
-dwg_ent_body_get_wireframe_data_present(dwg_ent_body *body, int *error)
+dwg_ent_body_get_wireframe_data_present(const dwg_ent_body *body, int *error)
 {
   if (body != 0)
     {
@@ -15164,7 +15164,7 @@ dwg_ent_body_set_wireframe_data_present(dwg_ent_body *body, char data,
 
 /// Returns point present value
 char
-dwg_ent_body_get_point_present(dwg_ent_body *body, int *error)
+dwg_ent_body_get_point_present(const dwg_ent_body *body, int *error)
 {
   if (body != 0)
     {
@@ -15190,7 +15190,7 @@ dwg_ent_body_set_point_present(dwg_ent_body *body, char point, int *error)
 
 /// Returns point values
 void
-dwg_ent_body_get_point(dwg_ent_body *body, dwg_point_3d *point, int *error)
+dwg_ent_body_get_point(const dwg_ent_body *body, dwg_point_3d *point, int *error)
 {
   if (body != 0)
     {
@@ -15220,7 +15220,7 @@ dwg_ent_body_set_point(dwg_ent_body *body, dwg_point_3d *point, int *error)
 
 /// Returns number of isolines
 long
-dwg_ent_body_get_num_isolines(dwg_ent_body *body, int *error)
+dwg_ent_body_get_num_isolines(const dwg_ent_body *body, int *error)
 {
   if (body != 0)
     {
@@ -15246,7 +15246,7 @@ dwg_ent_body_set_num_isolines(dwg_ent_body *body, long num, int *error)
 
 /// returns isoline present value
 char
-dwg_ent_body_get_isoline_present(dwg_ent_body *body, int *error)
+dwg_ent_body_get_isoline_present(const dwg_ent_body *body, int *error)
 {
   if (body != 0)
     {
@@ -15272,7 +15272,7 @@ dwg_ent_body_set_isoline_present(dwg_ent_body *body, char iso, int *error)
 
 /// Returns number of wires
 long
-dwg_ent_body_get_num_wires(dwg_ent_body *body, int *error)
+dwg_ent_body_get_num_wires(const dwg_ent_body *body, int *error)
 {
   if (body != 0)
     {
@@ -15298,7 +15298,7 @@ dwg_ent_body_set_num_wires(dwg_ent_body *body, long num, int *error)
 
 /// Returns wire of body
 dwg_ent_solid_wire *
-dwg_ent_body_get_wire(dwg_ent_body *body, int *error)
+dwg_ent_body_get_wire(const dwg_ent_body *body, int *error)
 {
   dwg_ent_solid_wire *ptx = (dwg_ent_solid_wire*)
   malloc(sizeof(dwg_ent_solid_wire)* body->num_wires);
@@ -15318,7 +15318,7 @@ dwg_ent_body_get_wire(dwg_ent_body *body, int *error)
 
 /// Returns number of silhouettes value
 long
-dwg_ent_body_get_num_silhouettes(dwg_ent_body *body, int *error)
+dwg_ent_body_get_num_silhouettes(const dwg_ent_body *body, int *error)
 {
   if (body != 0)
     {
@@ -15345,7 +15345,7 @@ dwg_ent_body_set_num_silhouettes(dwg_ent_body *body, long silhouettes,
 
 /// Returns silhouette for body entity
 dwg_ent_solid_silhouette *
-dwg_ent_body_get_silhouette(dwg_ent_body *body,
+dwg_ent_body_get_silhouette(const dwg_ent_body *body,
                             int *error)
 {
   dwg_ent_solid_silhouette *ptx = (dwg_ent_solid_silhouette*) 
@@ -15366,7 +15366,7 @@ dwg_ent_body_get_silhouette(dwg_ent_body *body,
 
 /// Returns acis empty2 value
 unsigned char
-dwg_ent_body_get_acis_empty2(dwg_ent_body *body, int *error)
+dwg_ent_body_get_acis_empty2(const dwg_ent_body *body, int *error)
 {
   if (body != 0)
     {
@@ -15413,7 +15413,7 @@ dwg_ent_table_set_insertion_point(dwg_ent_table *table, dwg_point_3d *point,
 
 /// Returns insertion point
 void
-dwg_ent_table_get_insertion_point(dwg_ent_table *table, dwg_point_3d *point,
+dwg_ent_table_get_insertion_point(const dwg_ent_table *table, dwg_point_3d *point,
                                   int *error)
 {
   if (table != 0)
@@ -15444,7 +15444,7 @@ dwg_ent_table_set_scale(dwg_ent_table *table, dwg_point_3d *point, int *error)
 
 /// Returns scale points
 void
-dwg_ent_table_get_scale(dwg_ent_table *table, dwg_point_3d *point, int *error)
+dwg_ent_table_get_scale(const dwg_ent_table *table, dwg_point_3d *point, int *error)
 {
   if (table != 0)
     {
@@ -15473,7 +15473,7 @@ dwg_ent_table_set_data_flags(dwg_ent_table *table, unsigned char flags,
 
 /// Returns data flags
 unsigned char
-dwg_ent_table_get_data_flags(dwg_ent_table *table, int *error)
+dwg_ent_table_get_data_flags(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15499,7 +15499,7 @@ dwg_ent_table_set_rotation(dwg_ent_table *table, double rotation, int *error)
 
 /// Returns rotation
 double
-dwg_ent_table_get_rotation(dwg_ent_table *table, int *error)
+dwg_ent_table_get_rotation(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15528,7 +15528,7 @@ dwg_ent_table_set_extrusion(dwg_ent_table *table, dwg_point_3d *point,
 
 /// Returns extrusion points
 void
-dwg_ent_table_get_extrusion(dwg_ent_table *table, dwg_point_3d *point,
+dwg_ent_table_get_extrusion(const dwg_ent_table *table, dwg_point_3d *point,
                             int *error)
 {
   if (table != 0)
@@ -15558,7 +15558,7 @@ dwg_ent_table_set_has_attribs(dwg_ent_table *table, unsigned char attribs,
 
 /// Returns has attribs
 unsigned char
-dwg_ent_table_get_has_attribs(dwg_ent_table *table, int *error)
+dwg_ent_table_get_has_attribs(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15585,7 +15585,7 @@ dwg_ent_table_set_owned_object_count(dwg_ent_table *table, long count,
 
 /// Returns owned object count
 long
-dwg_ent_table_get_owned_object_count(dwg_ent_table *table, int *error)
+dwg_ent_table_get_owned_object_count(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15612,7 +15612,7 @@ dwg_ent_table_set_flag_for_table_value(dwg_ent_table *table,
 
 /// Returns flag for table value
 unsigned int 
-dwg_ent_table_get_flag_for_table_value(dwg_ent_table *table, int *error)
+dwg_ent_table_get_flag_for_table_value(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15642,7 +15642,7 @@ dwg_ent_table_set_horiz_direction(dwg_ent_table *table, dwg_point_3d *point,
 
 /// Returns horiz direction 
 void
-dwg_ent_table_get_horiz_direction(dwg_ent_table *table, dwg_point_3d *point,
+dwg_ent_table_get_horiz_direction(const dwg_ent_table *table, dwg_point_3d *point,
                                   int *error)
 {
   if (table != 0)
@@ -15671,7 +15671,7 @@ dwg_ent_table_set_num_cols(dwg_ent_table *table, long num, int *error)
 
 /// Returns number of columns
 long
-dwg_ent_table_get_num_cols(dwg_ent_table *table, int *error)
+dwg_ent_table_get_num_cols(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15697,7 +15697,7 @@ dwg_ent_table_set_num_rows(dwg_ent_table *table, long num, int *error)
 
 /// Returns number of rows
 long
-dwg_ent_table_get_num_rows(dwg_ent_table *table, int *error)
+dwg_ent_table_get_num_rows(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15710,7 +15710,7 @@ dwg_ent_table_get_num_rows(dwg_ent_table *table, int *error)
 
 /// Returns column widths
 double *
-dwg_ent_table_get_col_widths(dwg_ent_table *table, int *error)
+dwg_ent_table_get_col_widths(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15723,7 +15723,7 @@ dwg_ent_table_get_col_widths(dwg_ent_table *table, int *error)
 
 /// Returns row heights
 double *
-dwg_ent_table_get_row_heights(dwg_ent_table *table, int *error)
+dwg_ent_table_get_row_heights(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15750,7 +15750,7 @@ dwg_ent_table_set_table_overrides_present(dwg_ent_table *table,
 
 /// Returns table overrides present
 unsigned char
-dwg_ent_table_get_table_overrides_present(dwg_ent_table *table, int *error)
+dwg_ent_table_get_table_overrides_present(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15777,7 +15777,7 @@ dwg_ent_table_set_table_flag_override(dwg_ent_table *table, long override,
 
 /// returns flag overrides
 long
-dwg_ent_table_get_table_flag_override(dwg_ent_table *table, int *error)
+dwg_ent_table_get_table_flag_override(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15804,7 +15804,7 @@ dwg_ent_table_set_title_suppressed(dwg_ent_table *table, unsigned char title,
 
 /// Returns title suppressed
 unsigned char
-dwg_ent_table_get_title_suppressed(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_suppressed(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15831,7 +15831,7 @@ dwg_ent_table_set_header_suppressed(dwg_ent_table *table, unsigned char header,
 
 /// Returns header suppressed
 unsigned char
-dwg_ent_table_get_header_suppressed(dwg_ent_table *table, int *error)
+dwg_ent_table_get_header_suppressed(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15858,7 +15858,7 @@ dwg_ent_table_set_flow_direction(dwg_ent_table *table, unsigned int dir,
 
 /// Returns flow direction
 unsigned int 
-dwg_ent_table_get_flow_direction(dwg_ent_table *table, int *error)
+dwg_ent_table_get_flow_direction(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15885,7 +15885,7 @@ dwg_ent_table_set_horiz_cell_margin(dwg_ent_table *table, double margin,
 
 /// Returns horiz cell margin
 double
-dwg_ent_table_get_horiz_cell_margin(dwg_ent_table *table, int *error)
+dwg_ent_table_get_horiz_cell_margin(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15912,7 +15912,7 @@ dwg_ent_table_set_vert_cell_margin(dwg_ent_table *table, double margin,
 
 /// Returns vert cell margin
 double
-dwg_ent_table_get_vert_cell_margin(dwg_ent_table *table, int *error)
+dwg_ent_table_get_vert_cell_margin(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15939,7 +15939,7 @@ dwg_ent_table_set_title_row_fill_none(dwg_ent_table *table, unsigned char fill,
 
 /// Returns title row fill none value
 unsigned char
-dwg_ent_table_get_title_row_fill_none(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_row_fill_none(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15966,7 +15966,7 @@ dwg_ent_table_set_header_row_fill_none(dwg_ent_table *table,
 
 /// Returns header row fill none value
 unsigned char
-dwg_ent_table_get_header_row_fill_none(dwg_ent_table *table, int *error)
+dwg_ent_table_get_header_row_fill_none(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -15993,7 +15993,7 @@ dwg_ent_table_set_data_row_fill_none(dwg_ent_table *table, unsigned char fill,
 
 /// Returns data row fill none value
 unsigned char
-dwg_ent_table_get_data_row_fill_none(dwg_ent_table *table, int *error)
+dwg_ent_table_get_data_row_fill_none(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16020,7 +16020,7 @@ dwg_ent_table_set_title_row_align(dwg_ent_table *table, unsigned char fill,
 
 /// Returns title row align
 unsigned int 
-dwg_ent_table_get_title_row_align(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_row_align(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16047,7 +16047,7 @@ dwg_ent_table_set_header_row_align(dwg_ent_table *table, unsigned int align,
 
 /// Returns header row align
 unsigned int 
-dwg_ent_table_get_header_row_align(dwg_ent_table *table, int *error)
+dwg_ent_table_get_header_row_align(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16074,7 +16074,7 @@ dwg_ent_table_set_data_row_align(dwg_ent_table *table, unsigned int align,
 
 /// Returns data row align
 unsigned int 
-dwg_ent_table_get_data_row_align(dwg_ent_table *table, int *error)
+dwg_ent_table_get_data_row_align(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16101,7 +16101,7 @@ dwg_ent_table_set_title_row_height(dwg_ent_table *table, double height,
 
 /// Returns title row height
 double
-dwg_ent_table_get_title_row_height(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_row_height(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16128,7 +16128,7 @@ dwg_ent_table_set_header_row_height(dwg_ent_table *table, double height,
 
 /// Returns header row height
 double
-dwg_ent_table_get_header_row_height(dwg_ent_table *table, int *error)
+dwg_ent_table_get_header_row_height(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16155,7 +16155,7 @@ dwg_ent_table_set_data_row_height(dwg_ent_table *table, double height,
 
 /// Returns data row height value
 double
-dwg_ent_table_get_data_row_height(dwg_ent_table *table, int *error)
+dwg_ent_table_get_data_row_height(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16183,7 +16183,7 @@ dwg_ent_table_set_border_color_overrides_present(dwg_ent_table *table,
 
 /// Returns border color overrides present value
 unsigned char
-dwg_ent_table_get_border_color_overrides_present(dwg_ent_table *table,
+dwg_ent_table_get_border_color_overrides_present(const dwg_ent_table *table,
                                                  int *error)
 {
   if (table != 0)
@@ -16211,7 +16211,7 @@ dwg_ent_table_set_border_color_overrides_flag(dwg_ent_table *table,
 
 /// Returns border color overrides flag value
 long
-dwg_ent_table_get_border_color_overrides_flag(dwg_ent_table *table, int *error)
+dwg_ent_table_get_border_color_overrides_flag(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16239,7 +16239,7 @@ dwg_ent_table_set_border_lineweight_overrides_present(dwg_ent_table *table,
 
 /// Returns border lineweight overrides present value
 unsigned char
-dwg_ent_table_get_border_lineweight_overrides_present(dwg_ent_table *table,
+dwg_ent_table_get_border_lineweight_overrides_present(const dwg_ent_table *table,
                                                       int *error)
 {
   if (table != 0)
@@ -16267,7 +16267,7 @@ dwg_ent_table_set_border_lineweight_overrides_flag(dwg_ent_table *table,
 
 /// Returns border lineweight overrides flag value
 long
-dwg_ent_table_get_border_lineweight_overrides_flag(dwg_ent_table *table,
+dwg_ent_table_get_border_lineweight_overrides_flag(const dwg_ent_table *table,
                                                    int *error)
 {
   if (table != 0)
@@ -16295,7 +16295,7 @@ dwg_ent_table_set_title_horiz_top_lineweight(dwg_ent_table *table,
 
 /// Returns title horiz top lineweight value
 unsigned int 
-dwg_ent_table_get_title_horiz_top_lineweight(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_horiz_top_lineweight(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16322,7 +16322,7 @@ dwg_ent_table_set_title_horiz_ins_lineweight(dwg_ent_table *table,
 
 /// Returns title horiz ins lineweight value
 unsigned int 
-dwg_ent_table_get_title_horiz_ins_lineweight(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_horiz_ins_lineweight(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16349,7 +16349,7 @@ dwg_ent_table_set_title_horiz_bottom_lineweight(dwg_ent_table *table,
 
 /// Returns title horiz bottom lineweight value
 unsigned int 
-dwg_ent_table_get_title_horiz_bottom_lineweight(dwg_ent_table *table,
+dwg_ent_table_get_title_horiz_bottom_lineweight(const dwg_ent_table *table,
                                                 int *error)
 {
   if (table != 0)
@@ -16377,7 +16377,7 @@ dwg_ent_table_set_title_vert_left_lineweight(dwg_ent_table *table,
 
 /// Sets title vert left lineweight value
 unsigned int
-dwg_ent_table_get_title_vert_left_lineweight(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_vert_left_lineweight(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16404,7 +16404,7 @@ dwg_ent_table_set_title_vert_ins_lineweight(dwg_ent_table *table,
 
 /// Returns title vert ins lineweight
 unsigned int 
-dwg_ent_table_get_title_vert_ins_lineweight(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_vert_ins_lineweight(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16431,7 +16431,7 @@ dwg_ent_table_set_title_vert_right_lineweight(dwg_ent_table *table,
 
 /// Returns title vert right lineweight value
 unsigned int 
-dwg_ent_table_get_title_vert_right_lineweight(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_vert_right_lineweight(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16458,7 +16458,7 @@ dwg_ent_table_set_header_horiz_top_lineweight(dwg_ent_table *table,
 
 /// Returns header horiz top lineweight value
 unsigned int 
-dwg_ent_table_get_header_horiz_top_lineweight(dwg_ent_table *table, int *error)
+dwg_ent_table_get_header_horiz_top_lineweight(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16485,7 +16485,7 @@ dwg_ent_table_set_header_horiz_ins_lineweight(dwg_ent_table *table,
 
 /// Returns header horiz ins lineweight value
 unsigned int 
-dwg_ent_table_get_header_horiz_ins_lineweight(dwg_ent_table *table,
+dwg_ent_table_get_header_horiz_ins_lineweight(const dwg_ent_table *table,
                                               int *error)
 {
   if (table != 0)
@@ -16513,7 +16513,7 @@ dwg_ent_table_set_header_horiz_bottom_lineweight(dwg_ent_table *table,
 
 /// Returns header horiz bottom lineweight value 
 unsigned int 
-dwg_ent_table_get_header_horiz_bottom_lineweight(dwg_ent_table *table,
+dwg_ent_table_get_header_horiz_bottom_lineweight(const dwg_ent_table *table,
                                                  int *error)
 {
   if (table != 0)
@@ -16541,7 +16541,7 @@ dwg_ent_table_set_header_vert_left_lineweight(dwg_ent_table *table,
 
 /// Returns header vert left lineweight value
 unsigned int 
-dwg_ent_table_get_header_vert_left_lineweight(dwg_ent_table *table, int *error)
+dwg_ent_table_get_header_vert_left_lineweight(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16568,7 +16568,7 @@ dwg_ent_table_set_header_vert_ins_lineweight(dwg_ent_table *table,
 
 /// Returns header vert ins lineweight value
 unsigned int 
-dwg_ent_table_get_header_vert_ins_lineweight(dwg_ent_table *table, int *error)
+dwg_ent_table_get_header_vert_ins_lineweight(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16595,7 +16595,7 @@ dwg_ent_table_set_header_vert_right_lineweight(dwg_ent_table *table,
 
 /// Returns header vert right lineweight value
 unsigned int 
-dwg_ent_table_get_header_vert_right_lineweight(dwg_ent_table *table,
+dwg_ent_table_get_header_vert_right_lineweight(const dwg_ent_table *table,
                                                int *error)
 {
   if (table != 0)
@@ -16623,7 +16623,7 @@ dwg_ent_table_set_data_horiz_top_lineweight(dwg_ent_table *table,
 
 /// Returns data horiz top lineweight value
 unsigned int 
-dwg_ent_table_get_data_horiz_top_lineweight(dwg_ent_table *table, int *error)
+dwg_ent_table_get_data_horiz_top_lineweight(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16650,7 +16650,7 @@ dwg_ent_table_set_data_horiz_ins_lineweight(dwg_ent_table *table,
 
 /// Returns data horiz ins lineweight value
 unsigned int 
-dwg_ent_table_get_data_horiz_ins_lineweight(dwg_ent_table *table, int *error)
+dwg_ent_table_get_data_horiz_ins_lineweight(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16677,7 +16677,7 @@ dwg_ent_table_set_data_horiz_bottom_lineweight(dwg_ent_table *table,
 
 /// Returns data horiz bottom lineweight
 unsigned int 
-dwg_ent_table_get_data_horiz_bottom_lineweight(dwg_ent_table *table,
+dwg_ent_table_get_data_horiz_bottom_lineweight(const dwg_ent_table *table,
                                                int *error)
 {
   if (table != 0)
@@ -16705,7 +16705,7 @@ dwg_ent_table_set_data_vert_ins_lineweight(dwg_ent_table *table,
 
 /// Returns title border visibility overrides flag
 unsigned int 
-dwg_ent_table_get_data_vert_ins_lineweight(dwg_ent_table *table, int *error)
+dwg_ent_table_get_data_vert_ins_lineweight(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16734,7 +16734,7 @@ dwg_ent_table_set_border_visibility_overrides_present(dwg_ent_table *table,
 
 /// Returns title border visibility overrides flag
 unsigned char
-dwg_ent_table_get_border_visibility_overrides_present(dwg_ent_table *table,
+dwg_ent_table_get_border_visibility_overrides_present(const dwg_ent_table *table,
                                                       int *error)
 {
   if (table != 0)
@@ -16762,7 +16762,7 @@ dwg_ent_table_set_border_visibility_overrides_flag(dwg_ent_table *table,
 
 /// Returns title border visibility overrides flag
 long
-dwg_ent_table_get_border_visibility_overrides_flag(dwg_ent_table *table,
+dwg_ent_table_get_border_visibility_overrides_flag(const dwg_ent_table *table,
                                                    int *error)
 {
   if (table != 0)
@@ -16791,7 +16791,7 @@ dwg_ent_table_set_title_horiz_top_visibility(dwg_ent_table *table,
 
 /// Returns title horiz top visibility
 unsigned int 
-dwg_ent_table_get_title_horiz_top_visibility(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_horiz_top_visibility(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16819,7 +16819,7 @@ dwg_ent_table_set_title_horiz_ins_visibility(dwg_ent_table *table,
 
 /// Returns title horiz ins visibility
 unsigned int 
-dwg_ent_table_get_title_horiz_ins_visibility(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_horiz_ins_visibility(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16847,7 +16847,7 @@ dwg_ent_table_set_title_horiz_bottom_visibility(dwg_ent_table *table,
 
 /// Returns title horiz bottom visibility
 unsigned int 
-dwg_ent_table_get_title_horiz_bottom_visibility(dwg_ent_table *table,
+dwg_ent_table_get_title_horiz_bottom_visibility(const dwg_ent_table *table,
                                                 int *error)
 {
   if (table != 0)
@@ -16876,7 +16876,7 @@ dwg_ent_table_set_title_vert_left_visibility(dwg_ent_table *table,
 
 /// Returns title vert left visibility
 unsigned int 
-dwg_ent_table_get_title_vert_left_visibility(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_vert_left_visibility(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16904,7 +16904,7 @@ dwg_ent_table_set_title_vert_ins_visibility(dwg_ent_table *table,
 
 /// Returns title vert ins visibility
 unsigned int 
-dwg_ent_table_get_title_vert_ins_visibility(dwg_ent_table *table, int *error)
+dwg_ent_table_get_title_vert_ins_visibility(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -16932,7 +16932,7 @@ dwg_ent_table_set_title_vert_right_visibility(dwg_ent_table *table,
 
 /// Returns title vert right visibility
 unsigned int 
-dwg_ent_table_get_title_vert_right_visibility(dwg_ent_table *table,
+dwg_ent_table_get_title_vert_right_visibility(const dwg_ent_table *table,
                                               int *error)
 {
   if (table != 0)
@@ -16961,7 +16961,7 @@ dwg_ent_table_set_header_horiz_top_visibility(dwg_ent_table *table,
 
 /// Returns data header horiz top visibility
 unsigned int 
-dwg_ent_table_get_header_horiz_top_visibility(dwg_ent_table *table,
+dwg_ent_table_get_header_horiz_top_visibility(const dwg_ent_table *table,
                                               int *error)
 {
   if (table != 0)
@@ -16990,7 +16990,7 @@ dwg_ent_table_set_header_horiz_ins_visibility(dwg_ent_table *table,
 
 /// Returns data header horiz ins visibility
 unsigned int 
-dwg_ent_table_get_header_horiz_ins_visibility(dwg_ent_table *table,
+dwg_ent_table_get_header_horiz_ins_visibility(const dwg_ent_table *table,
                                               int *error)
 {
   if (table != 0)
@@ -17019,7 +17019,7 @@ dwg_ent_table_set_header_horiz_bottom_visibility(dwg_ent_table *table,
 
 /// Returns data header vert left visibility
 unsigned int 
-dwg_ent_table_get_header_vert_left_visibility(dwg_ent_table *table,
+dwg_ent_table_get_header_vert_left_visibility(const dwg_ent_table *table,
                                               int *error)
 {
   if (table != 0)
@@ -17048,7 +17048,7 @@ dwg_ent_table_set_header_vert_ins_visibility(dwg_ent_table *table,
 
 /// Returns data header vert ins visibility
 unsigned int 
-dwg_ent_table_get_header_vert_ins_visibility(dwg_ent_table *table, int *error)
+dwg_ent_table_get_header_vert_ins_visibility(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -17076,7 +17076,7 @@ dwg_ent_table_set_header_vert_right_visibility(dwg_ent_table *table,
 
 /// Returns data header vert right visibility
 unsigned int 
-dwg_ent_table_get_header_vert_right_visibility(dwg_ent_table *table,
+dwg_ent_table_get_header_vert_right_visibility(const dwg_ent_table *table,
                                                int *error)
 {
   if (table != 0)
@@ -17105,7 +17105,7 @@ dwg_ent_table_set_data_horiz_top_visibility(dwg_ent_table *table,
 
 /// Returns data horiz top visibility
 unsigned int 
-dwg_ent_table_get_data_horiz_top_visibility(dwg_ent_table *table, int *error)
+dwg_ent_table_get_data_horiz_top_visibility(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -17133,7 +17133,7 @@ dwg_ent_table_set_data_horiz_ins_visibility(dwg_ent_table *table,
 
 /// Returns data horiz ins visibility
 unsigned int 
-dwg_ent_table_get_data_horiz_ins_visibility(dwg_ent_table *table, int *error)
+dwg_ent_table_get_data_horiz_ins_visibility(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -17161,7 +17161,7 @@ dwg_ent_table_set_data_horiz_bottom_visibility(dwg_ent_table *table,
 
 /// Returns data horiz bottom visibility
 unsigned int 
-dwg_ent_table_get_data_horiz_bottom_visibility(dwg_ent_table *table,
+dwg_ent_table_get_data_horiz_bottom_visibility(const dwg_ent_table *table,
                                                int *error)
 {
   if (table != 0)
@@ -17190,7 +17190,7 @@ dwg_ent_table_set_data_vert_ins_visibility(dwg_ent_table *table,
 
 /// Returns data vert ins visibility
 unsigned int 
-dwg_ent_table_get_data_vert_ins_visibility(dwg_ent_table *table, int *error)
+dwg_ent_table_get_data_vert_ins_visibility(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
@@ -17218,7 +17218,7 @@ dwg_ent_table_set_data_vert_right_visibility(dwg_ent_table *table,
 
 /// Returns data vert right visibility
 unsigned int 
-dwg_ent_table_get_data_vert_right_visibility(dwg_ent_table *table, int *error)
+dwg_ent_table_get_data_vert_right_visibility(const dwg_ent_table *table, int *error)
 {
   if (table != 0)
     {
