@@ -30,6 +30,7 @@
 #include "dwg.h"
 #include "decode.h"
 #include "print.h"
+#include "hashmap.h"
 
 extern unsigned int
 bit_ckr8(unsigned int dx, unsigned char *adr, long n);
@@ -266,9 +267,6 @@ static void
 dwg_decode_add_object(Dwg_Data * dwg, Bit_Chain * dat,
     long unsigned int address);
 
-static Dwg_Object *
-dwg_resolve_handle(Dwg_Data* dwg, unsigned long int handle);
-
 static void
 dwg_decode_header_variables(Bit_Chain* dat, Dwg_Data * dwg);
 
@@ -277,6 +275,13 @@ resolve_objectref_vector(Dwg_Data * dwg);
 
 int decode_R13_R15(Bit_Chain* dat, Dwg_Data * dwg); // froward
 int read_r2007_meta_data(Bit_Chain *dat, Dwg_Data *dwg);
+
+static int s_absolute_ref_hash(void* key){
+}
+
+static bool s_absolute_ref_equals(void* A, void* B){
+}
+
 
 /*--------------------------------------------------------------------------------
  * Public variables
@@ -294,8 +299,11 @@ dwg_decode_data(Bit_Chain * dat, Dwg_Data * dwg)
   dwg->num_layers = 0;
   dwg->num_entities = 0;
   dwg->num_objects = 0;
+  dwg->capacity = 10;
+  dwg->object = (Dwg_Object *) malloc(10 * sizeof(Dwg_Object));
   dwg->num_classes = 0;
 
+	dwg->hash_map = hashmapCreate(100, s_absolute_ref_hash, s_absolute_ref_equals);
 #ifdef USE_TRACING
   /* Before starting, set the logging level, but only do so once.  */
   if (! env_var_checked_p)
@@ -2120,20 +2128,16 @@ dwg_decode_object(Bit_Chain * dat, Dwg_Object_Object * ord)
 /**
  * Find a pointer to an object given it's id (handle)
  */
-static Dwg_Object *
+Dwg_Object *
 dwg_resolve_handle(Dwg_Data* dwg, long unsigned int absref)
 {
-  //FIXME find a faster algorithm
-  long unsigned int i;
-  for (i = 0; i < dwg->num_objects; i++)
-    {
-      if (dwg->object[i].handle.value == absref)
-        {
-          return &dwg->object[i];
-        }
-    }
-  LOG_ERROR("Object not found: %lu\n", absref)
-  return 0;
+	Hashmap* map = (Hashmap*)dwg->hash_map;
+
+	long unsigned int x = (long unsigned int)hashmapGet(map, (void*)absref);
+	if(0 == x)
+		return 0;
+
+	return dwg->object + (x - 1);
 }
 
 static Dwg_Object_Ref *
@@ -2600,11 +2604,10 @@ dwg_decode_add_object(Dwg_Data * dwg, Bit_Chain * dat,
   /*
    * Reserve memory space for objects
    */
-  if (dwg->num_objects == 0)
-    dwg->object = (Dwg_Object *) malloc(sizeof(Dwg_Object));
-  else
-    dwg->object = (Dwg_Object *) realloc(dwg->object, (dwg->num_objects + 1)
-        * sizeof(Dwg_Object));
+  if (dwg->num_objects == dwg->capacity){
+		dwg->capacity *= 2;
+    dwg->object = (Dwg_Object *) realloc(dwg->object, dwg->capacity * sizeof(Dwg_Object));
+	}
 
   if (loglevel)
       LOG_INFO("\n\n======================\nObject number: %lu",
@@ -2869,6 +2872,11 @@ dwg_decode_add_object(Dwg_Data * dwg, Bit_Chain * dat,
         memcpy(obj->tio.unknown, &dat->chain[object_address], obj->size);
       }
     }
+
+	Hashmap* map = (Hashmap*)dwg->hash_map;
+  if(!hashmapPut(map, (void*)obj->handle.value, (void*)dwg->num_objects)){
+    LOG_INFO("Hashmap allocation failed!\n")
+	}
 
   /*
    if (obj->supertype != DWG_SUPERTYPE_UNKNOWN)

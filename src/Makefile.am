@@ -21,6 +21,7 @@ lib_LTLIBRARIES = libredwg.la
 
 libredwg_la_SOURCES = \
 	dwg.c \
+	hashmap.c \
 	common.c \
 	bits.c \
 	decode.c \

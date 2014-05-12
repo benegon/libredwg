@@ -2801,6 +2801,7 @@ typedef struct _dwg_struct
   Dwg_Class * dwg_class;
 
   long unsigned int num_objects;
+  long unsigned int capacity;
   Dwg_Object *object;
 
   long unsigned int num_layers;
@@ -2828,6 +2829,7 @@ typedef struct _dwg_struct
 
   struct _bit_chain *bit_chain;
 
+	void* hash_map;
 } Dwg_Data;
 
 /*--------------------------------------------------
@@ -2898,6 +2900,8 @@ get_next_owned_object(Dwg_Object* hdr_obj, Dwg_Object* current, Dwg_Object_BLOCK
 void
 dwg_print_object(Dwg_Object *obj);
 
+Dwg_Object*
+dwg_resolve_handle(Dwg_Data* dwg, long unsigned int absref);
 
 double dwg_page_x_min(Dwg_Data *dwg);
 double dwg_page_x_max(Dwg_Data *dwg);

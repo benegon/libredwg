@@ -30,6 +30,7 @@
 #include "dwg.h"
 
 #include "logging.h"
+#include "hashmap.h"
 
 /*------------------------------------------------------------------------------
  * Public functions
@@ -388,4 +389,5 @@ dwg_free(Dwg_Data * dwg)
 {
   if (dwg->header.section)
     free(dwg->header.section);
+	hashmapFree((Hashmap*)dwg->hash_map);
 }
