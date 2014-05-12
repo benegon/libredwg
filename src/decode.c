@@ -277,9 +277,11 @@ int decode_R13_R15(Bit_Chain* dat, Dwg_Data * dwg); // froward
 int read_r2007_meta_data(Bit_Chain *dat, Dwg_Data *dwg);
 
 static int s_absolute_ref_hash(void* key){
+	return key;
 }
 
 static bool s_absolute_ref_equals(void* A, void* B){
+	return A == B;
 }
 
 
